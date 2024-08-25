@@ -21,16 +21,32 @@ namespace srv
 namespace builder
 {
 
-class Init_TrashInfo_Request_trash_location
+class Init_TrashInfo_Request_longitude
 {
 public:
-  explicit Init_TrashInfo_Request_trash_location(::interface_package::srv::TrashInfo_Request & msg)
+  explicit Init_TrashInfo_Request_longitude(::interface_package::srv::TrashInfo_Request & msg)
   : msg_(msg)
   {}
-  ::interface_package::srv::TrashInfo_Request trash_location(::interface_package::srv::TrashInfo_Request::_trash_location_type arg)
+  ::interface_package::srv::TrashInfo_Request longitude(::interface_package::srv::TrashInfo_Request::_longitude_type arg)
   {
-    msg_.trash_location = std::move(arg);
+    msg_.longitude = std::move(arg);
     return std::move(msg_);
+  }
+
+private:
+  ::interface_package::srv::TrashInfo_Request msg_;
+};
+
+class Init_TrashInfo_Request_latitude
+{
+public:
+  explicit Init_TrashInfo_Request_latitude(::interface_package::srv::TrashInfo_Request & msg)
+  : msg_(msg)
+  {}
+  Init_TrashInfo_Request_longitude latitude(::interface_package::srv::TrashInfo_Request::_latitude_type arg)
+  {
+    msg_.latitude = std::move(arg);
+    return Init_TrashInfo_Request_longitude(msg_);
   }
 
 private:
@@ -43,10 +59,10 @@ public:
   explicit Init_TrashInfo_Request_trash_type(::interface_package::srv::TrashInfo_Request & msg)
   : msg_(msg)
   {}
-  Init_TrashInfo_Request_trash_location trash_type(::interface_package::srv::TrashInfo_Request::_trash_type_type arg)
+  Init_TrashInfo_Request_latitude trash_type(::interface_package::srv::TrashInfo_Request::_trash_type_type arg)
   {
     msg_.trash_type = std::move(arg);
-    return Init_TrashInfo_Request_trash_location(msg_);
+    return Init_TrashInfo_Request_latitude(msg_);
   }
 
 private:

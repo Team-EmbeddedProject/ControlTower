@@ -29,7 +29,8 @@ typedef struct interface_package__srv__TrashInfo_Request
   builtin_interfaces__msg__Time timestamp;
   int32_t robot_id;
   rosidl_runtime_c__String trash_type;
-  float trash_location[3];
+  float latitude;
+  float longitude;
 } interface_package__srv__TrashInfo_Request;
 
 // Struct for a sequence of interface_package__srv__TrashInfo_Request.

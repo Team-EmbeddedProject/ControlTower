@@ -6,7 +6,6 @@
 
 module interface_package {
   module srv {
-    typedef float float__3[3];
     struct TrashInfo_Request {
       builtin_interfaces::msg::Time timestamp;
 
@@ -14,7 +13,9 @@ module interface_package {
 
       string trash_type;
 
-      float__3 trash_location;
+      float latitude;
+
+      float longitude;
     };
     struct TrashInfo_Response {
       boolean success;

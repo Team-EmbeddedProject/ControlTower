@@ -1,0 +1,79 @@
+[0.000000] (-) TimerEvent: {}
+[0.001935] (-) JobUnselected: {'identifier': 'interface_package'}
+[0.002668] (ct_package) JobQueued: {'identifier': 'ct_package', 'dependencies': OrderedDict()}
+[0.003226] (ct_package) JobStarted: {'identifier': 'ct_package'}
+[0.099136] (-) TimerEvent: {}
+[0.200077] (-) TimerEvent: {}
+[0.300962] (-) TimerEvent: {}
+[0.401759] (-) TimerEvent: {}
+[0.502964] (-) TimerEvent: {}
+[0.603688] (-) TimerEvent: {}
+[0.704487] (-) TimerEvent: {}
+[0.805236] (-) TimerEvent: {}
+[0.905954] (-) TimerEvent: {}
+[1.006701] (-) TimerEvent: {}
+[1.107462] (-) TimerEvent: {}
+[1.208261] (-) TimerEvent: {}
+[1.309320] (-) TimerEvent: {}
+[1.410490] (-) TimerEvent: {}
+[1.511258] (-) TimerEvent: {}
+[1.612119] (-) TimerEvent: {}
+[1.713425] (-) TimerEvent: {}
+[1.814300] (-) TimerEvent: {}
+[1.915312] (-) TimerEvent: {}
+[2.016081] (-) TimerEvent: {}
+[2.116850] (-) TimerEvent: {}
+[2.217624] (-) TimerEvent: {}
+[2.318494] (-) TimerEvent: {}
+[2.419387] (-) TimerEvent: {}
+[2.520178] (-) TimerEvent: {}
+[2.621046] (-) TimerEvent: {}
+[2.722007] (-) TimerEvent: {}
+[2.823368] (-) TimerEvent: {}
+[2.856698] (ct_package) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/ct_package', 'build', '--build-base', '/home/pi/workspace/ControlTower/build/ct_package/build', 'install', '--record', '/home/pi/workspace/ControlTower/build/ct_package/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/pi/workspace/ControlTower/src/ct_package', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'ko:en', 'USER': 'pi', 'SSH_CLIENT': '192.168.0.3 57582 22', 'LC_TIME': 'ko_KR.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/pi/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/pi/workspace/ControlTower/install/interface_package/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/home/pi/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/pi', 'OLDPWD': '/home/pi/workspace', 'TERM_PROGRAM_VERSION': '1.81.1', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-cb47c73c-621d-4764-afd2-7ffbd20c49af.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/pi/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'ko_KR.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/home/pi/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/node', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/pi/workspace/ControlTower/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'pi', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '9', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/pi/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/bin/remote-cli:/home/pi/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'PAPERSIZE': 'a4', 'LC_ADDRESS': 'ko_KR.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'ko_KR.UTF-8', 'LC_TELEPHONE': 'ko_KR.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-a40301fdcb.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/pi/workspace/ControlTower/install/interface_package:/home/pi/workspace/ControlTower/install/ct_package:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'ko_KR.UTF-8', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'ko_KR.UTF-8', 'LC_IDENTIFICATION': 'ko_KR.UTF-8', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/pi/workspace/ControlTower/build/ct_package', 'SSH_CONNECTION': '192.168.0.3 57582 192.168.0.4 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/pi/workspace/ControlTower/build/ct_package/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages:/home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages:/home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'ko_KR.UTF-8', 'LC_PAPER': 'ko_KR.UTF-8', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/pi/workspace/ControlTower/install/interface_package'}, 'shell': False}
+[2.923512] (-) TimerEvent: {}
+[3.024334] (-) TimerEvent: {}
+[3.125156] (-) TimerEvent: {}
+[3.225978] (-) TimerEvent: {}
+[3.327055] (-) TimerEvent: {}
+[3.427805] (-) TimerEvent: {}
+[3.528580] (-) TimerEvent: {}
+[3.629283] (-) TimerEvent: {}
+[3.729992] (-) TimerEvent: {}
+[3.830734] (-) TimerEvent: {}
+[3.931470] (-) TimerEvent: {}
+[4.007450] (ct_package) StdoutLine: {'line': b'running egg_info\n'}
+[4.010603] (ct_package) StdoutLine: {'line': b'writing ../../build/ct_package/ct_package.egg-info/PKG-INFO\n'}
+[4.011874] (ct_package) StdoutLine: {'line': b'writing dependency_links to ../../build/ct_package/ct_package.egg-info/dependency_links.txt\n'}
+[4.013233] (ct_package) StdoutLine: {'line': b'writing entry points to ../../build/ct_package/ct_package.egg-info/entry_points.txt\n'}
+[4.014073] (ct_package) StdoutLine: {'line': b'writing requirements to ../../build/ct_package/ct_package.egg-info/requires.txt\n'}
+[4.015129] (ct_package) StdoutLine: {'line': b'writing top-level names to ../../build/ct_package/ct_package.egg-info/top_level.txt\n'}
+[4.023495] (ct_package) StdoutLine: {'line': b"reading manifest file '../../build/ct_package/ct_package.egg-info/SOURCES.txt'\n"}
+[4.028081] (ct_package) StdoutLine: {'line': b"writing manifest file '../../build/ct_package/ct_package.egg-info/SOURCES.txt'\n"}
+[4.029086] (ct_package) StdoutLine: {'line': b'running build\n'}
+[4.029809] (ct_package) StdoutLine: {'line': b'running build_py\n'}
+[4.031577] (-) TimerEvent: {}
+[4.032457] (ct_package) StdoutLine: {'line': b'copying ct_package/mqtt_communication.py -> /home/pi/workspace/ControlTower/build/ct_package/build/lib/ct_package\n'}
+[4.035612] (ct_package) StdoutLine: {'line': b'running install\n'}
+[4.036981] (ct_package) StdoutLine: {'line': b'running install_lib\n'}
+[4.042991] (ct_package) StdoutLine: {'line': b'copying /home/pi/workspace/ControlTower/build/ct_package/build/lib/ct_package/mqtt_communication.py -> /home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages/ct_package\n'}
+[4.047384] (ct_package) StdoutLine: {'line': b'byte-compiling /home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages/ct_package/mqtt_communication.py to mqtt_communication.cpython-310.pyc\n'}
+[4.053588] (ct_package) StdoutLine: {'line': b'running install_data\n'}
+[4.055007] (ct_package) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.062428] (ct_package) StdoutLine: {'line': b"removing '/home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages/ct_package-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[4.068209] (ct_package) StdoutLine: {'line': b'Copying ../../build/ct_package/ct_package.egg-info to /home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages/ct_package-0.0.0-py3.10.egg-info\n'}
+[4.072577] (ct_package) StdoutLine: {'line': b'running install_scripts\n'}
+[4.131787] (-) TimerEvent: {}
+[4.154252] (ct_package) StdoutLine: {'line': b'Installing arm_planner script to /home/pi/workspace/ControlTower/install/ct_package/lib/ct_package\n'}
+[4.155332] (ct_package) StdoutLine: {'line': b'Installing cam_coord_transform script to /home/pi/workspace/ControlTower/install/ct_package/lib/ct_package\n'}
+[4.156389] (ct_package) StdoutLine: {'line': b'Installing camera_calibration script to /home/pi/workspace/ControlTower/install/ct_package/lib/ct_package\n'}
+[4.157277] (ct_package) StdoutLine: {'line': b'Installing camera_subscriber script to /home/pi/workspace/ControlTower/install/ct_package/lib/ct_package\n'}
+[4.158254] (ct_package) StdoutLine: {'line': b'Installing data_publisher script to /home/pi/workspace/ControlTower/install/ct_package/lib/ct_package\n'}
+[4.159226] (ct_package) StdoutLine: {'line': b'Installing mqtt_communication script to /home/pi/workspace/ControlTower/install/ct_package/lib/ct_package\n'}
+[4.160285] (ct_package) StdoutLine: {'line': b'Installing trash_detector script to /home/pi/workspace/ControlTower/install/ct_package/lib/ct_package\n'}
+[4.162898] (ct_package) StdoutLine: {'line': b"writing list of installed files to '/home/pi/workspace/ControlTower/build/ct_package/install.log'\n"}
+[4.232198] (-) TimerEvent: {}
+[4.296420] (ct_package) CommandEnded: {'returncode': 0}
+[4.332344] (-) TimerEvent: {}
+[4.352150] (ct_package) JobEnded: {'identifier': 'ct_package', 'rc': 0}
+[4.355238] (-) EventReactorShutdown: {}

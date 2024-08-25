@@ -9,9 +9,6 @@ import builtins  # noqa: E402, I100
 
 import math  # noqa: E402, I100
 
-# Member 'trash_location'
-import numpy  # noqa: E402, I100
-
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -67,21 +64,24 @@ class TrashInfo_Request(metaclass=Metaclass_TrashInfo_Request):
         '_timestamp',
         '_robot_id',
         '_trash_type',
-        '_trash_location',
+        '_latitude',
+        '_longitude',
     ]
 
     _fields_and_field_types = {
         'timestamp': 'builtin_interfaces/Time',
         'robot_id': 'int32',
         'trash_type': 'string',
-        'trash_location': 'float[3]',
+        'latitude': 'float',
+        'longitude': 'float',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.NamespacedType(['builtin_interfaces', 'msg'], 'Time'),  # noqa: E501
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
-        rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('float'), 3),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -92,11 +92,8 @@ class TrashInfo_Request(metaclass=Metaclass_TrashInfo_Request):
         self.timestamp = kwargs.get('timestamp', Time())
         self.robot_id = kwargs.get('robot_id', int())
         self.trash_type = kwargs.get('trash_type', str())
-        if 'trash_location' not in kwargs:
-            self.trash_location = numpy.zeros(3, dtype=numpy.float32)
-        else:
-            self.trash_location = numpy.array(kwargs.get('trash_location'), dtype=numpy.float32)
-            assert self.trash_location.shape == (3, )
+        self.latitude = kwargs.get('latitude', float())
+        self.longitude = kwargs.get('longitude', float())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -133,7 +130,9 @@ class TrashInfo_Request(metaclass=Metaclass_TrashInfo_Request):
             return False
         if self.trash_type != other.trash_type:
             return False
-        if all(self.trash_location != other.trash_location):
+        if self.latitude != other.latitude:
+            return False
+        if self.longitude != other.longitude:
             return False
         return True
 
@@ -185,35 +184,34 @@ class TrashInfo_Request(metaclass=Metaclass_TrashInfo_Request):
         self._trash_type = value
 
     @builtins.property
-    def trash_location(self):
-        """Message field 'trash_location'."""
-        return self._trash_location
+    def latitude(self):
+        """Message field 'latitude'."""
+        return self._latitude
 
-    @trash_location.setter
-    def trash_location(self, value):
-        if isinstance(value, numpy.ndarray):
-            assert value.dtype == numpy.float32, \
-                "The 'trash_location' numpy.ndarray() must have the dtype of 'numpy.float32'"
-            assert value.size == 3, \
-                "The 'trash_location' numpy.ndarray() must have a size of 3"
-            self._trash_location = value
-            return
+    @latitude.setter
+    def latitude(self, value):
         if __debug__:
-            from collections.abc import Sequence
-            from collections.abc import Set
-            from collections import UserList
-            from collections import UserString
             assert \
-                ((isinstance(value, Sequence) or
-                  isinstance(value, Set) or
-                  isinstance(value, UserList)) and
-                 not isinstance(value, str) and
-                 not isinstance(value, UserString) and
-                 len(value) == 3 and
-                 all(isinstance(v, float) for v in value) and
-                 all(not (val < -3.402823466e+38 or val > 3.402823466e+38) or math.isinf(val) for val in value)), \
-                "The 'trash_location' field must be a set or sequence with length 3 and each value of type 'float' and each float in [-340282346600000016151267322115014000640.000000, 340282346600000016151267322115014000640.000000]"
-        self._trash_location = numpy.array(value, dtype=numpy.float32)
+                isinstance(value, float), \
+                "The 'latitude' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'latitude' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._latitude = value
+
+    @builtins.property
+    def longitude(self):
+        """Message field 'longitude'."""
+        return self._longitude
+
+    @longitude.setter
+    def longitude(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'longitude' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'longitude' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._longitude = value
 
 
 # Import statements for member types

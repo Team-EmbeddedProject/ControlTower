@@ -45,21 +45,22 @@ struct TrashInfo_Request_
     {
       this->robot_id = 0l;
       this->trash_type = "";
-      std::fill<typename std::array<float, 3>::iterator, float>(this->trash_location.begin(), this->trash_location.end(), 0.0f);
+      this->latitude = 0.0f;
+      this->longitude = 0.0f;
     }
   }
 
   explicit TrashInfo_Request_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   : timestamp(_alloc, _init),
-    trash_type(_alloc),
-    trash_location(_alloc)
+    trash_type(_alloc)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->robot_id = 0l;
       this->trash_type = "";
-      std::fill<typename std::array<float, 3>::iterator, float>(this->trash_location.begin(), this->trash_location.end(), 0.0f);
+      this->latitude = 0.0f;
+      this->longitude = 0.0f;
     }
   }
 
@@ -73,9 +74,12 @@ struct TrashInfo_Request_
   using _trash_type_type =
     std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
   _trash_type_type trash_type;
-  using _trash_location_type =
-    std::array<float, 3>;
-  _trash_location_type trash_location;
+  using _latitude_type =
+    float;
+  _latitude_type latitude;
+  using _longitude_type =
+    float;
+  _longitude_type longitude;
 
   // setters for named parameter idiom
   Type & set__timestamp(
@@ -96,10 +100,16 @@ struct TrashInfo_Request_
     this->trash_type = _arg;
     return *this;
   }
-  Type & set__trash_location(
-    const std::array<float, 3> & _arg)
+  Type & set__latitude(
+    const float & _arg)
   {
-    this->trash_location = _arg;
+    this->latitude = _arg;
+    return *this;
+  }
+  Type & set__longitude(
+    const float & _arg)
+  {
+    this->longitude = _arg;
     return *this;
   }
 
@@ -154,7 +164,10 @@ struct TrashInfo_Request_
     if (this->trash_type != other.trash_type) {
       return false;
     }
-    if (this->trash_location != other.trash_location) {
+    if (this->latitude != other.latitude) {
+      return false;
+    }
+    if (this->longitude != other.longitude) {
       return false;
     }
     return true;

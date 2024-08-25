@@ -33,7 +33,8 @@ interface_package__srv__TrashInfo_Request__init(interface_package__srv__TrashInf
     interface_package__srv__TrashInfo_Request__fini(msg);
     return false;
   }
-  // trash_location
+  // latitude
+  // longitude
   return true;
 }
 
@@ -48,7 +49,8 @@ interface_package__srv__TrashInfo_Request__fini(interface_package__srv__TrashInf
   // robot_id
   // trash_type
   rosidl_runtime_c__String__fini(&msg->trash_type);
-  // trash_location
+  // latitude
+  // longitude
 }
 
 bool
@@ -73,11 +75,13 @@ interface_package__srv__TrashInfo_Request__are_equal(const interface_package__sr
   {
     return false;
   }
-  // trash_location
-  for (size_t i = 0; i < 3; ++i) {
-    if (lhs->trash_location[i] != rhs->trash_location[i]) {
-      return false;
-    }
+  // latitude
+  if (lhs->latitude != rhs->latitude) {
+    return false;
+  }
+  // longitude
+  if (lhs->longitude != rhs->longitude) {
+    return false;
   }
   return true;
 }
@@ -104,10 +108,10 @@ interface_package__srv__TrashInfo_Request__copy(
   {
     return false;
   }
-  // trash_location
-  for (size_t i = 0; i < 3; ++i) {
-    output->trash_location[i] = input->trash_location[i];
-  }
+  // latitude
+  output->latitude = input->latitude;
+  // longitude
+  output->longitude = input->longitude;
   return true;
 }
 

@@ -19,9 +19,6 @@
 #include "rosidl_runtime_c/string.h"
 #include "rosidl_runtime_c/string_functions.h"
 
-#include "rosidl_runtime_c/primitives_sequence.h"
-#include "rosidl_runtime_c/primitives_sequence_functions.h"
-
 ROSIDL_GENERATOR_C_IMPORT
 bool builtin_interfaces__msg__time__convert_from_py(PyObject * _pymsg, void * _ros_message);
 ROSIDL_GENERATOR_C_IMPORT
@@ -95,28 +92,22 @@ bool interface_package__srv__trash_info__request__convert_from_py(PyObject * _py
     Py_DECREF(encoded_field);
     Py_DECREF(field);
   }
-  {  // trash_location
-    PyObject * field = PyObject_GetAttrString(_pymsg, "trash_location");
+  {  // latitude
+    PyObject * field = PyObject_GetAttrString(_pymsg, "latitude");
     if (!field) {
       return false;
     }
-    {
-      // TODO(dirk-thomas) use a better way to check the type before casting
-      assert(field->ob_type != NULL);
-      assert(field->ob_type->tp_name != NULL);
-      assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
-      PyArrayObject * seq_field = (PyArrayObject *)field;
-      Py_INCREF(seq_field);
-      assert(PyArray_NDIM(seq_field) == 1);
-      assert(PyArray_TYPE(seq_field) == NPY_FLOAT32);
-      Py_ssize_t size = 3;
-      float * dest = ros_message->trash_location;
-      for (Py_ssize_t i = 0; i < size; ++i) {
-        float tmp = *(npy_float32 *)PyArray_GETPTR1(seq_field, i);
-        memcpy(&dest[i], &tmp, sizeof(float));
-      }
-      Py_DECREF(seq_field);
+    assert(PyFloat_Check(field));
+    ros_message->latitude = (float)PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // longitude
+    PyObject * field = PyObject_GetAttrString(_pymsg, "longitude");
+    if (!field) {
+      return false;
     }
+    assert(PyFloat_Check(field));
+    ros_message->longitude = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
 
@@ -183,23 +174,27 @@ PyObject * interface_package__srv__trash_info__request__convert_to_py(void * raw
       }
     }
   }
-  {  // trash_location
+  {  // latitude
     PyObject * field = NULL;
-    field = PyObject_GetAttrString(_pymessage, "trash_location");
-    if (!field) {
-      return NULL;
+    field = PyFloat_FromDouble(ros_message->latitude);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "latitude", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
     }
-    assert(field->ob_type != NULL);
-    assert(field->ob_type->tp_name != NULL);
-    assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
-    PyArrayObject * seq_field = (PyArrayObject *)field;
-    assert(PyArray_NDIM(seq_field) == 1);
-    assert(PyArray_TYPE(seq_field) == NPY_FLOAT32);
-    assert(sizeof(npy_float32) == sizeof(float));
-    npy_float32 * dst = (npy_float32 *)PyArray_GETPTR1(seq_field, 0);
-    float * src = &(ros_message->trash_location[0]);
-    memcpy(dst, src, 3 * sizeof(float));
-    Py_DECREF(field);
+  }
+  {  // longitude
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->longitude);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "longitude", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
   }
 
   // ownership of _pymessage is transferred to the caller

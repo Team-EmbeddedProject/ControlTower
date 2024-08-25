@@ -1,4 +1,5 @@
 builtin_interfaces/Time timestamp
 int32 robot_id
 string trash_type
-float32[3] trash_location
+float32 latitude
+float32 longitude

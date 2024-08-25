@@ -213,5 +213,4 @@ CMakeFiles/interface_package__rosidl_generator_py.dir/rosidl_generator_py/interf
  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
  /home/pi/workspace/ControlTower/build/interface_package/rosidl_generator_c/interface_package/srv/detail/trash_info__functions.h \
  /home/pi/workspace/ControlTower/build/interface_package/rosidl_generator_c/interface_package/msg/rosidl_generator_c__visibility_control.h \
- /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h \
- /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence_functions.h
+ /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h

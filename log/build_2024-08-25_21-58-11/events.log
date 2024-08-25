@@ -1,0 +1,640 @@
+[0.000000] (-) TimerEvent: {}
+[0.001925] (ct_package) JobQueued: {'identifier': 'ct_package', 'dependencies': OrderedDict()}
+[0.002620] (interface_package) JobQueued: {'identifier': 'interface_package', 'dependencies': OrderedDict()}
+[0.003188] (ct_package) JobStarted: {'identifier': 'ct_package'}
+[0.040022] (interface_package) JobStarted: {'identifier': 'interface_package'}
+[0.099168] (-) TimerEvent: {}
+[0.199949] (-) TimerEvent: {}
+[0.300708] (-) TimerEvent: {}
+[0.401651] (-) TimerEvent: {}
+[0.502405] (-) TimerEvent: {}
+[0.603145] (-) TimerEvent: {}
+[0.703934] (-) TimerEvent: {}
+[0.804666] (-) TimerEvent: {}
+[0.905441] (-) TimerEvent: {}
+[1.006213] (-) TimerEvent: {}
+[1.106965] (-) TimerEvent: {}
+[1.207816] (-) TimerEvent: {}
+[1.310683] (-) TimerEvent: {}
+[1.316178] (interface_package) JobProgress: {'identifier': 'interface_package', 'progress': 'cmake'}
+[1.320946] (interface_package) JobProgress: {'identifier': 'interface_package', 'progress': 'build'}
+[1.323921] (interface_package) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/pi/workspace/ControlTower/build/interface_package', '--', '-j4', '-l4'], 'cwd': '/home/pi/workspace/ControlTower/build/interface_package', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'ko:en'), ('USER', 'pi'), ('SSH_CLIENT', '192.168.0.3 57582 22'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/pi/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/pi/workspace/ControlTower/install/interface_package/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/pi/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/pi'), ('OLDPWD', '/home/pi/workspace'), ('TERM_PROGRAM_VERSION', '1.81.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-cb47c73c-621d-4764-afd2-7ffbd20c49af.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/pi/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/pi/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/node'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/pi/workspace/ControlTower/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'pi'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '9'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/pi/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/bin/remote-cli:/home/pi/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('PAPERSIZE', 'a4'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'ko_KR.UTF-8'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-a40301fdcb.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/pi/workspace/ControlTower/install/interface_package:/home/pi/workspace/ControlTower/install/ct_package:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/pi/workspace/ControlTower/build/interface_package'), ('SSH_CONNECTION', '192.168.0.3 57582 192.168.0.4 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages:/home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/pi/workspace/ControlTower/install/interface_package:/home/pi/workspace/ControlTower/install/ct_package:/opt/ros/humble')]), 'shell': False}
+[1.410860] (-) TimerEvent: {}
+[1.458964] (interface_package) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.511064] (-) TimerEvent: {}
+[1.612940] (-) TimerEvent: {}
+[1.714509] (-) TimerEvent: {}
+[1.815973] (-) TimerEvent: {}
+[1.916918] (-) TimerEvent: {}
+[2.017839] (-) TimerEvent: {}
+[2.118862] (-) TimerEvent: {}
+[2.200596] (interface_package) StdoutLine: {'line': b'-- Found builtin_interfaces: 1.2.1 (/opt/ros/humble/share/builtin_interfaces/cmake)\n'}
+[2.218993] (-) TimerEvent: {}
+[2.319889] (-) TimerEvent: {}
+[2.392784] (interface_package) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[2.409357] (interface_package) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[2.420056] (-) TimerEvent: {}
+[2.449666] (interface_package) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[2.507693] (interface_package) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.520228] (-) TimerEvent: {}
+[2.583463] (interface_package) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.620416] (-) TimerEvent: {}
+[2.648223] (interface_package) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[2.720644] (-) TimerEvent: {}
+[2.821647] (-) TimerEvent: {}
+[2.922636] (-) TimerEvent: {}
+[3.023654] (-) TimerEvent: {}
+[3.124820] (-) TimerEvent: {}
+[3.161419] (ct_package) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/ct_package', 'build', '--build-base', '/home/pi/workspace/ControlTower/build/ct_package/build', 'install', '--record', '/home/pi/workspace/ControlTower/build/ct_package/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/pi/workspace/ControlTower/src/ct_package', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'ko:en', 'USER': 'pi', 'SSH_CLIENT': '192.168.0.3 57582 22', 'LC_TIME': 'ko_KR.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/pi/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/pi/workspace/ControlTower/install/interface_package/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/home/pi/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/pi', 'OLDPWD': '/home/pi/workspace', 'TERM_PROGRAM_VERSION': '1.81.1', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-cb47c73c-621d-4764-afd2-7ffbd20c49af.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/pi/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'ko_KR.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/home/pi/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/node', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/pi/workspace/ControlTower/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'pi', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '9', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/pi/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/bin/remote-cli:/home/pi/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'PAPERSIZE': 'a4', 'LC_ADDRESS': 'ko_KR.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'ko_KR.UTF-8', 'LC_TELEPHONE': 'ko_KR.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-a40301fdcb.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/pi/workspace/ControlTower/install/interface_package:/home/pi/workspace/ControlTower/install/ct_package:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'ko_KR.UTF-8', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'ko_KR.UTF-8', 'LC_IDENTIFICATION': 'ko_KR.UTF-8', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/pi/workspace/ControlTower/build/ct_package', 'SSH_CONNECTION': '192.168.0.3 57582 192.168.0.4 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/pi/workspace/ControlTower/build/ct_package/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages:/home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages:/home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'ko_KR.UTF-8', 'LC_PAPER': 'ko_KR.UTF-8', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/pi/workspace/ControlTower/install/interface_package'}, 'shell': False}
+[3.225056] (-) TimerEvent: {}
+[3.326565] (-) TimerEvent: {}
+[3.428088] (-) TimerEvent: {}
+[3.529032] (-) TimerEvent: {}
+[3.630394] (-) TimerEvent: {}
+[3.731982] (-) TimerEvent: {}
+[3.833135] (-) TimerEvent: {}
+[3.933984] (-) TimerEvent: {}
+[4.035249] (-) TimerEvent: {}
+[4.078917] (interface_package) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[4.135373] (-) TimerEvent: {}
+[4.236177] (-) TimerEvent: {}
+[4.337075] (-) TimerEvent: {}
+[4.438100] (-) TimerEvent: {}
+[4.539845] (-) TimerEvent: {}
+[4.588813] (ct_package) StdoutLine: {'line': b'running egg_info\n'}
+[4.595082] (ct_package) StdoutLine: {'line': b'writing ../../build/ct_package/ct_package.egg-info/PKG-INFO\n'}
+[4.598258] (ct_package) StdoutLine: {'line': b'writing dependency_links to ../../build/ct_package/ct_package.egg-info/dependency_links.txt\n'}
+[4.605412] (ct_package) StdoutLine: {'line': b'writing entry points to ../../build/ct_package/ct_package.egg-info/entry_points.txt\n'}
+[4.609486] (ct_package) StdoutLine: {'line': b'writing requirements to ../../build/ct_package/ct_package.egg-info/requires.txt\n'}
+[4.612327] (ct_package) StdoutLine: {'line': b'writing top-level names to ../../build/ct_package/ct_package.egg-info/top_level.txt\n'}
+[4.617580] (ct_package) StdoutLine: {'line': b"reading manifest file '../../build/ct_package/ct_package.egg-info/SOURCES.txt'\n"}
+[4.620374] (ct_package) StdoutLine: {'line': b"writing manifest file '../../build/ct_package/ct_package.egg-info/SOURCES.txt'\n"}
+[4.621981] (ct_package) StdoutLine: {'line': b'running build\n'}
+[4.622977] (ct_package) StdoutLine: {'line': b'running build_py\n'}
+[4.625365] (ct_package) StdoutLine: {'line': b'copying ct_package/data_publisher.py -> /home/pi/workspace/ControlTower/build/ct_package/build/lib/ct_package\n'}
+[4.627753] (ct_package) StdoutLine: {'line': b'copying ct_package/mqtt_communication.py -> /home/pi/workspace/ControlTower/build/ct_package/build/lib/ct_package\n'}
+[4.629251] (ct_package) StdoutLine: {'line': b'running install\n'}
+[4.630733] (ct_package) StdoutLine: {'line': b'running install_lib\n'}
+[4.635673] (ct_package) StdoutLine: {'line': b'copying /home/pi/workspace/ControlTower/build/ct_package/build/lib/ct_package/data_publisher.py -> /home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages/ct_package\n'}
+[4.639246] (ct_package) StdoutLine: {'line': b'copying /home/pi/workspace/ControlTower/build/ct_package/build/lib/ct_package/mqtt_communication.py -> /home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages/ct_package\n'}
+[4.639932] (-) TimerEvent: {}
+[4.642138] (ct_package) StdoutLine: {'line': b'byte-compiling /home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages/ct_package/data_publisher.py to data_publisher.cpython-310.pyc\n'}
+[4.648265] (ct_package) StdoutLine: {'line': b'byte-compiling /home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages/ct_package/mqtt_communication.py to mqtt_communication.cpython-310.pyc\n'}
+[4.655187] (ct_package) StdoutLine: {'line': b'running install_data\n'}
+[4.656715] (ct_package) StdoutLine: {'line': b'copying params/mqtt_param.yaml -> /home/pi/workspace/ControlTower/install/ct_package/share/ct_package/params\n'}
+[4.657664] (ct_package) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.665003] (ct_package) StdoutLine: {'line': b"removing '/home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages/ct_package-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[4.667068] (ct_package) StdoutLine: {'line': b'Copying ../../build/ct_package/ct_package.egg-info to /home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages/ct_package-0.0.0-py3.10.egg-info\n'}
+[4.679758] (ct_package) StdoutLine: {'line': b'running install_scripts\n'}
+[4.740342] (-) TimerEvent: {}
+[4.788642] (ct_package) StdoutLine: {'line': b'Installing arm_planner script to /home/pi/workspace/ControlTower/install/ct_package/lib/ct_package\n'}
+[4.790127] (ct_package) StdoutLine: {'line': b'Installing cam_coord_transform script to /home/pi/workspace/ControlTower/install/ct_package/lib/ct_package\n'}
+[4.791611] (ct_package) StdoutLine: {'line': b'Installing camera_calibration script to /home/pi/workspace/ControlTower/install/ct_package/lib/ct_package\n'}
+[4.793018] (ct_package) StdoutLine: {'line': b'Installing camera_subscriber script to /home/pi/workspace/ControlTower/install/ct_package/lib/ct_package\n'}
+[4.802026] (ct_package) StdoutLine: {'line': b'Installing data_publisher script to /home/pi/workspace/ControlTower/install/ct_package/lib/ct_package\n'}
+[4.806416] (ct_package) StdoutLine: {'line': b'Installing mqtt_communication script to /home/pi/workspace/ControlTower/install/ct_package/lib/ct_package\n'}
+[4.808025] (ct_package) StdoutLine: {'line': b'Installing trash_detector script to /home/pi/workspace/ControlTower/install/ct_package/lib/ct_package\n'}
+[4.812032] (ct_package) StdoutLine: {'line': b"writing list of installed files to '/home/pi/workspace/ControlTower/build/ct_package/install.log'\n"}
+[4.841466] (-) TimerEvent: {}
+[4.924085] (ct_package) CommandEnded: {'returncode': 0}
+[4.941589] (-) TimerEvent: {}
+[4.985035] (ct_package) JobEnded: {'identifier': 'ct_package', 'rc': 0}
+[5.041792] (-) TimerEvent: {}
+[5.142653] (-) TimerEvent: {}
+[5.243511] (-) TimerEvent: {}
+[5.344439] (-) TimerEvent: {}
+[5.445759] (-) TimerEvent: {}
+[5.546716] (-) TimerEvent: {}
+[5.647531] (-) TimerEvent: {}
+[5.686259] (interface_package) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[5.747750] (-) TimerEvent: {}
+[5.848689] (-) TimerEvent: {}
+[5.950001] (-) TimerEvent: {}
+[6.050785] (-) TimerEvent: {}
+[6.151567] (-) TimerEvent: {}
+[6.252308] (-) TimerEvent: {}
+[6.283249] (interface_package) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[6.352563] (-) TimerEvent: {}
+[6.393933] (interface_package) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[6.452724] (-) TimerEvent: {}
+[6.506784] (interface_package) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[6.507599] (interface_package) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[6.508063] (interface_package) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so\n'}
+[6.552927] (-) TimerEvent: {}
+[6.568118] (interface_package) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[6.653199] (-) TimerEvent: {}
+[6.661855] (interface_package) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[6.663825] (interface_package) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[6.664530] (interface_package) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[6.671973] (interface_package) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[6.690643] (interface_package) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[6.691366] (interface_package) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[6.694574] (interface_package) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[6.706377] (interface_package) StdoutLine: {'line': b'-- Configuring done\n'}
+[6.753383] (-) TimerEvent: {}
+[6.854639] (-) TimerEvent: {}
+[6.915926] (interface_package) StdoutLine: {'line': b'-- Generating done\n'}
+[6.933483] (interface_package) StdoutLine: {'line': b'-- Build files have been written to: /home/pi/workspace/ControlTower/build/interface_package\n'}
+[6.954839] (-) TimerEvent: {}
+[7.039427] (interface_package) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[7.055343] (-) TimerEvent: {}
+[7.101313] (interface_package) StdoutLine: {'line': b'[  4%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[7.155545] (-) TimerEvent: {}
+[7.168002] (interface_package) StdoutLine: {'line': b'[  4%] Built target ament_cmake_python_copy_interface_package\n'}
+[7.255772] (-) TimerEvent: {}
+[7.357022] (-) TimerEvent: {}
+[7.458302] (-) TimerEvent: {}
+[7.559562] (-) TimerEvent: {}
+[7.660798] (-) TimerEvent: {}
+[7.763472] (-) TimerEvent: {}
+[7.865984] (-) TimerEvent: {}
+[7.968651] (-) TimerEvent: {}
+[8.071377] (-) TimerEvent: {}
+[8.174007] (-) TimerEvent: {}
+[8.276311] (-) TimerEvent: {}
+[8.379011] (-) TimerEvent: {}
+[8.480318] (-) TimerEvent: {}
+[8.582786] (-) TimerEvent: {}
+[8.680950] (interface_package) StdoutLine: {'line': b'running egg_info\n'}
+[8.686033] (-) TimerEvent: {}
+[8.689366] (interface_package) StdoutLine: {'line': b'writing interface_package.egg-info/PKG-INFO\n'}
+[8.695428] (interface_package) StdoutLine: {'line': b'writing dependency_links to interface_package.egg-info/dependency_links.txt\n'}
+[8.698771] (interface_package) StdoutLine: {'line': b'writing top-level names to interface_package.egg-info/top_level.txt\n'}
+[8.710493] (interface_package) StdoutLine: {'line': b"reading manifest file 'interface_package.egg-info/SOURCES.txt'\n"}
+[8.714959] (interface_package) StdoutLine: {'line': b"writing manifest file 'interface_package.egg-info/SOURCES.txt'\n"}
+[8.786533] (-) TimerEvent: {}
+[8.888639] (-) TimerEvent: {}
+[8.892818] (interface_package) StdoutLine: {'line': b'[  4%] Built target ament_cmake_python_build_interface_package_egg\n'}
+[8.988886] (-) TimerEvent: {}
+[9.090131] (-) TimerEvent: {}
+[9.193092] (-) TimerEvent: {}
+[9.295875] (-) TimerEvent: {}
+[9.372819] (interface_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interface_package__rosidl_generator_c\x1b[0m\n'}
+[9.396202] (-) TimerEvent: {}
+[9.410302] (interface_package) StdoutLine: {'line': b'[  4%] Built target interface_package__cpp\n'}
+[9.436588] (interface_package) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/interface_package__rosidl_generator_c.dir/rosidl_generator_c/interface_package/srv/detail/node_num__functions.c.o\x1b[0m\n'}
+[9.441754] (interface_package) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/interface_package__rosidl_generator_c.dir/rosidl_generator_c/interface_package/srv/detail/trash_info__functions.c.o\x1b[0m\n'}
+[9.446717] (interface_package) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/interface_package__rosidl_generator_c.dir/rosidl_generator_c/interface_package/msg/detail/robot_log__functions.c.o\x1b[0m\n'}
+[9.466188] (interface_package) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[9.496388] (-) TimerEvent: {}
+[9.598066] (-) TimerEvent: {}
+[9.699412] (-) TimerEvent: {}
+[9.800549] (-) TimerEvent: {}
+[9.901581] (-) TimerEvent: {}
+[10.002451] (-) TimerEvent: {}
+[10.103360] (-) TimerEvent: {}
+[10.204229] (-) TimerEvent: {}
+[10.293157] (interface_package) StdoutLine: {'line': b'[ 17%] \x1b[32m\x1b[1mLinking C shared library libinterface_package__rosidl_generator_c.so\x1b[0m\n'}
+[10.297394] (interface_package) StdoutLine: {'line': b'[ 17%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[10.304536] (interface_package) StdoutLine: {'line': b'[ 19%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[10.305475] (-) TimerEvent: {}
+[10.406853] (-) TimerEvent: {}
+[10.507706] (-) TimerEvent: {}
+[10.606171] (interface_package) StdoutLine: {'line': b'[ 19%] Built target interface_package__rosidl_generator_c\n'}
+[10.607910] (-) TimerEvent: {}
+[10.667634] (interface_package) StdoutLine: {'line': b'[ 21%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[10.708158] (-) TimerEvent: {}
+[10.809240] (-) TimerEvent: {}
+[10.910533] (-) TimerEvent: {}
+[11.011778] (-) TimerEvent: {}
+[11.113048] (-) TimerEvent: {}
+[11.195153] (interface_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interface_package__rosidl_typesupport_cpp\x1b[0m\n'}
+[11.213515] (-) TimerEvent: {}
+[11.317534] (-) TimerEvent: {}
+[11.405881] (interface_package) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/interface_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interface_package/msg/robot_log__type_support.cpp.o\x1b[0m\n'}
+[11.417711] (-) TimerEvent: {}
+[11.520291] (-) TimerEvent: {}
+[11.621237] (-) TimerEvent: {}
+[11.722545] (-) TimerEvent: {}
+[11.843543] (-) TimerEvent: {}
+[11.945516] (-) TimerEvent: {}
+[12.047801] (-) TimerEvent: {}
+[12.148828] (-) TimerEvent: {}
+[12.249730] (-) TimerEvent: {}
+[12.350594] (-) TimerEvent: {}
+[12.426050] (interface_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interface_package__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[12.450803] (-) TimerEvent: {}
+[12.512949] (interface_package) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/interface_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interface_package/msg/detail/robot_log__type_support.cpp.o\x1b[0m\n'}
+[12.551063] (-) TimerEvent: {}
+[12.567261] (interface_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interface_package__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[12.651397] (-) TimerEvent: {}
+[12.665989] (interface_package) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/interface_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interface_package/msg/detail/dds_fastrtps/robot_log__type_support.cpp.o\x1b[0m\n'}
+[12.751742] (-) TimerEvent: {}
+[12.853591] (-) TimerEvent: {}
+[12.954644] (-) TimerEvent: {}
+[13.050295] (interface_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interface_package__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[13.056727] (-) TimerEvent: {}
+[13.159683] (-) TimerEvent: {}
+[13.203920] (interface_package) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/interface_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interface_package/msg/detail/robot_log__type_support_c.cpp.o\x1b[0m\n'}
+[13.259955] (-) TimerEvent: {}
+[13.361811] (-) TimerEvent: {}
+[13.463470] (-) TimerEvent: {}
+[13.565416] (-) TimerEvent: {}
+[13.667267] (-) TimerEvent: {}
+[13.769057] (-) TimerEvent: {}
+[13.870895] (-) TimerEvent: {}
+[13.974103] (-) TimerEvent: {}
+[14.031752] (interface_package) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/interface_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interface_package/srv/node_num__type_support.cpp.o\x1b[0m\n'}
+[14.073531] (-) TimerEvent: {}
+[14.174608] (-) TimerEvent: {}
+[14.275570] (-) TimerEvent: {}
+[14.376510] (-) TimerEvent: {}
+[14.477597] (-) TimerEvent: {}
+[14.578947] (-) TimerEvent: {}
+[14.679957] (-) TimerEvent: {}
+[14.781010] (-) TimerEvent: {}
+[14.882095] (-) TimerEvent: {}
+[14.983116] (-) TimerEvent: {}
+[15.084238] (-) TimerEvent: {}
+[15.185309] (-) TimerEvent: {}
+[15.239770] (interface_package) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/interface_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interface_package/srv/detail/node_num__type_support.cpp.o\x1b[0m\n'}
+[15.285545] (-) TimerEvent: {}
+[15.387706] (-) TimerEvent: {}
+[15.482911] (interface_package) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/interface_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interface_package/srv/detail/dds_fastrtps/node_num__type_support.cpp.o\x1b[0m\n'}
+[15.487924] (-) TimerEvent: {}
+[15.532317] (interface_package) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/interface_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interface_package/srv/detail/node_num__type_support_c.cpp.o\x1b[0m\n'}
+[15.588218] (-) TimerEvent: {}
+[15.690079] (-) TimerEvent: {}
+[15.792012] (-) TimerEvent: {}
+[15.874683] (interface_package) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/interface_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interface_package/srv/trash_info__type_support.cpp.o\x1b[0m\n'}
+[15.898818] (-) TimerEvent: {}
+[16.000793] (-) TimerEvent: {}
+[16.105266] (-) TimerEvent: {}
+[16.207882] (-) TimerEvent: {}
+[16.310905] (-) TimerEvent: {}
+[16.414070] (-) TimerEvent: {}
+[16.517975] (-) TimerEvent: {}
+[16.621405] (-) TimerEvent: {}
+[16.725521] (-) TimerEvent: {}
+[16.836145] (-) TimerEvent: {}
+[16.939564] (-) TimerEvent: {}
+[17.043719] (-) TimerEvent: {}
+[17.147391] (-) TimerEvent: {}
+[17.250727] (-) TimerEvent: {}
+[17.356991] (-) TimerEvent: {}
+[17.458924] (-) TimerEvent: {}
+[17.561628] (-) TimerEvent: {}
+[17.663947] (-) TimerEvent: {}
+[17.766246] (-) TimerEvent: {}
+[17.861359] (interface_package) StdoutLine: {'line': b'[ 42%] \x1b[32m\x1b[1mLinking CXX shared library libinterface_package__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[17.866822] (-) TimerEvent: {}
+[17.968981] (-) TimerEvent: {}
+[18.008145] (interface_package) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/interface_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interface_package/srv/detail/trash_info__type_support_c.cpp.o\x1b[0m\n'}
+[18.033537] (interface_package) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/interface_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interface_package/srv/detail/trash_info__type_support.cpp.o\x1b[0m\n'}
+[18.069521] (-) TimerEvent: {}
+[18.088284] (interface_package) StdoutLine: {'line': b'[ 46%] Built target interface_package__rosidl_typesupport_cpp\n'}
+[18.141326] (interface_package) StdoutLine: {'line': b'[ 48%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[18.171190] (-) TimerEvent: {}
+[18.272711] (-) TimerEvent: {}
+[18.334408] (interface_package) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/interface_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interface_package/srv/detail/dds_fastrtps/trash_info__type_support.cpp.o\x1b[0m\n'}
+[18.373043] (-) TimerEvent: {}
+[18.474509] (-) TimerEvent: {}
+[18.576046] (-) TimerEvent: {}
+[18.677576] (-) TimerEvent: {}
+[18.778957] (-) TimerEvent: {}
+[18.880407] (-) TimerEvent: {}
+[18.982108] (-) TimerEvent: {}
+[19.083539] (-) TimerEvent: {}
+[19.184989] (-) TimerEvent: {}
+[19.286441] (-) TimerEvent: {}
+[19.388181] (-) TimerEvent: {}
+[19.491228] (-) TimerEvent: {}
+[19.593891] (-) TimerEvent: {}
+[19.695306] (-) TimerEvent: {}
+[19.796822] (-) TimerEvent: {}
+[19.898542] (-) TimerEvent: {}
+[20.000225] (-) TimerEvent: {}
+[20.101655] (-) TimerEvent: {}
+[20.213451] (-) TimerEvent: {}
+[20.314673] (-) TimerEvent: {}
+[20.415753] (-) TimerEvent: {}
+[20.515482] (interface_package) StdoutLine: {'line': b'[ 53%] \x1b[32m\x1b[1mLinking CXX shared library libinterface_package__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[20.516299] (-) TimerEvent: {}
+[20.556475] (interface_package) StdoutLine: {'line': b'[ 55%] \x1b[32m\x1b[1mLinking CXX shared library libinterface_package__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[20.561086] (interface_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interface_package__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[20.616992] (-) TimerEvent: {}
+[20.718758] (-) TimerEvent: {}
+[20.814752] (interface_package) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding C object CMakeFiles/interface_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interface_package/msg/detail/robot_log__type_support.c.o\x1b[0m\n'}
+[20.819093] (-) TimerEvent: {}
+[20.921872] (-) TimerEvent: {}
+[21.025455] (-) TimerEvent: {}
+[21.045486] (interface_package) StdoutLine: {'line': b'[ 57%] Built target interface_package__rosidl_typesupport_fastrtps_c\n'}
+[21.127093] (-) TimerEvent: {}
+[21.144739] (interface_package) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding C object CMakeFiles/interface_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interface_package/srv/detail/node_num__type_support.c.o\x1b[0m\n'}
+[21.147512] (interface_package) StdoutLine: {'line': b'[ 61%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[21.196730] (interface_package) StdoutLine: {'line': b'[ 61%] Built target interface_package__rosidl_typesupport_introspection_cpp\n'}
+[21.227363] (-) TimerEvent: {}
+[21.249447] (interface_package) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding C object CMakeFiles/interface_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interface_package/srv/detail/trash_info__type_support.c.o\x1b[0m\n'}
+[21.327573] (-) TimerEvent: {}
+[21.377840] (interface_package) StdoutLine: {'line': b'[ 65%] \x1b[32m\x1b[1mLinking CXX shared library libinterface_package__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[21.427795] (-) TimerEvent: {}
+[21.504008] (interface_package) StdoutLine: {'line': b'[ 68%] \x1b[32m\x1b[1mLinking C shared library libinterface_package__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[21.528043] (-) TimerEvent: {}
+[21.629152] (-) TimerEvent: {}
+[21.706895] (interface_package) StdoutLine: {'line': b'[ 68%] Built target interface_package__rosidl_typesupport_introspection_c\n'}
+[21.729400] (-) TimerEvent: {}
+[21.745874] (interface_package) StdoutLine: {'line': b'[ 68%] Built target interface_package__rosidl_typesupport_fastrtps_cpp\n'}
+[21.829585] (-) TimerEvent: {}
+[21.930828] (-) TimerEvent: {}
+[22.031589] (-) TimerEvent: {}
+[22.132403] (-) TimerEvent: {}
+[22.233242] (-) TimerEvent: {}
+[22.334000] (-) TimerEvent: {}
+[22.434907] (-) TimerEvent: {}
+[22.536080] (-) TimerEvent: {}
+[22.570389] (interface_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interface_package__rosidl_typesupport_c\x1b[0m\n'}
+[22.626817] (interface_package) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/interface_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/interface_package/msg/robot_log__type_support.cpp.o\x1b[0m\n'}
+[22.632680] (interface_package) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/interface_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/interface_package/srv/node_num__type_support.cpp.o\x1b[0m\n'}
+[22.635302] (interface_package) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/interface_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/interface_package/srv/trash_info__type_support.cpp.o\x1b[0m\n'}
+[22.636204] (-) TimerEvent: {}
+[22.736852] (-) TimerEvent: {}
+[22.812322] (interface_package) StdoutLine: {'line': b'[ 76%] \x1b[32m\x1b[1mLinking CXX shared library libinterface_package__rosidl_typesupport_c.so\x1b[0m\n'}
+[22.837271] (-) TimerEvent: {}
+[22.938283] (-) TimerEvent: {}
+[22.981334] (interface_package) StdoutLine: {'line': b'[ 76%] Built target interface_package__rosidl_typesupport_c\n'}
+[23.038533] (-) TimerEvent: {}
+[23.069388] (interface_package) StdoutLine: {'line': b'[ 76%] Built target interface_package\n'}
+[23.138820] (-) TimerEvent: {}
+[23.158500] (interface_package) StdoutLine: {'line': b'[ 78%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[23.238978] (-) TimerEvent: {}
+[23.340069] (-) TimerEvent: {}
+[23.441301] (-) TimerEvent: {}
+[23.542527] (-) TimerEvent: {}
+[23.643333] (-) TimerEvent: {}
+[23.744195] (-) TimerEvent: {}
+[23.845055] (-) TimerEvent: {}
+[23.945919] (-) TimerEvent: {}
+[24.046678] (-) TimerEvent: {}
+[24.147416] (-) TimerEvent: {}
+[24.248149] (-) TimerEvent: {}
+[24.348881] (-) TimerEvent: {}
+[24.449659] (-) TimerEvent: {}
+[24.550430] (-) TimerEvent: {}
+[24.651181] (-) TimerEvent: {}
+[24.752004] (-) TimerEvent: {}
+[24.852745] (-) TimerEvent: {}
+[24.953569] (-) TimerEvent: {}
+[25.054364] (-) TimerEvent: {}
+[25.155113] (-) TimerEvent: {}
+[25.255882] (-) TimerEvent: {}
+[25.356632] (-) TimerEvent: {}
+[25.457422] (-) TimerEvent: {}
+[25.558144] (-) TimerEvent: {}
+[25.659006] (-) TimerEvent: {}
+[25.761602] (-) TimerEvent: {}
+[25.793725] (interface_package) StdoutLine: {'line': b'[ 78%] Built target interface_package__py\n'}
+[25.841142] (interface_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interface_package__rosidl_generator_py\x1b[0m\n'}
+[25.871356] (-) TimerEvent: {}
+[25.929960] (interface_package) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding C object CMakeFiles/interface_package__rosidl_generator_py.dir/rosidl_generator_py/interface_package/msg/_robot_log_s.c.o\x1b[0m\n'}
+[25.939680] (interface_package) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/interface_package__rosidl_generator_py.dir/rosidl_generator_py/interface_package/srv/_trash_info_s.c.o\x1b[0m\n'}
+[25.950154] (interface_package) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/interface_package__rosidl_generator_py.dir/rosidl_generator_py/interface_package/srv/_node_num_s.c.o\x1b[0m\n'}
+[25.971715] (-) TimerEvent: {}
+[26.074892] (-) TimerEvent: {}
+[26.177066] (-) TimerEvent: {}
+[26.279708] (-) TimerEvent: {}
+[26.382283] (-) TimerEvent: {}
+[26.484924] (-) TimerEvent: {}
+[26.588365] (-) TimerEvent: {}
+[26.620824] (interface_package) StdoutLine: {'line': b'[ 87%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/interface_package/libinterface_package__rosidl_generator_py.so\x1b[0m\n'}
+[26.688671] (-) TimerEvent: {}
+[26.790025] (-) TimerEvent: {}
+[26.812374] (interface_package) StdoutLine: {'line': b'[ 87%] Built target interface_package__rosidl_generator_py\n'}
+[26.860394] (interface_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interface_package__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[26.873883] (interface_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interface_package__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[26.874356] (interface_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target interface_package__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[26.905339] (-) TimerEvent: {}
+[26.935504] (interface_package) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/interface_package__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/interface_package/_interface_package_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[26.966676] (interface_package) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/interface_package__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/interface_package/_interface_package_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[27.007304] (-) TimerEvent: {}
+[27.040016] (interface_package) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/interface_package__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/interface_package/_interface_package_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[27.107545] (-) TimerEvent: {}
+[27.209340] (-) TimerEvent: {}
+[27.310718] (-) TimerEvent: {}
+[27.412469] (-) TimerEvent: {}
+[27.514330] (-) TimerEvent: {}
+[27.615970] (-) TimerEvent: {}
+[27.673886] (interface_package) StdoutLine: {'line': b'[ 95%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/interface_package/interface_package_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[27.708362] (interface_package) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/interface_package/interface_package_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[27.716195] (-) TimerEvent: {}
+[27.817381] (-) TimerEvent: {}
+[27.868490] (interface_package) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/interface_package/interface_package_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[27.915355] (interface_package) StdoutLine: {'line': b'[100%] Built target interface_package__rosidl_typesupport_fastrtps_c__pyext\n'}
+[27.917584] (-) TimerEvent: {}
+[27.931780] (interface_package) StdoutLine: {'line': b'[100%] Built target interface_package__rosidl_typesupport_introspection_c__pyext\n'}
+[28.017787] (-) TimerEvent: {}
+[28.044308] (interface_package) StdoutLine: {'line': b'[100%] Built target interface_package__rosidl_typesupport_c__pyext\n'}
+[28.090954] (interface_package) CommandEnded: {'returncode': 0}
+[28.118000] (-) TimerEvent: {}
+[28.218800] (-) TimerEvent: {}
+[28.319538] (-) TimerEvent: {}
+[28.420213] (-) TimerEvent: {}
+[28.520992] (-) TimerEvent: {}
+[28.621819] (-) TimerEvent: {}
+[28.681396] (interface_package) JobProgress: {'identifier': 'interface_package', 'progress': 'install'}
+[28.715131] (interface_package) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/pi/workspace/ControlTower/build/interface_package'], 'cwd': '/home/pi/workspace/ControlTower/build/interface_package', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'ko:en'), ('USER', 'pi'), ('SSH_CLIENT', '192.168.0.3 57582 22'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/pi/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/pi/workspace/ControlTower/install/interface_package/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/pi/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/pi'), ('OLDPWD', '/home/pi/workspace'), ('TERM_PROGRAM_VERSION', '1.81.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-cb47c73c-621d-4764-afd2-7ffbd20c49af.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/pi/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/pi/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/node'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/pi/workspace/ControlTower/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'pi'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '9'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/pi/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/bin/remote-cli:/home/pi/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('PAPERSIZE', 'a4'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'ko_KR.UTF-8'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-a40301fdcb.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/pi/workspace/ControlTower/install/interface_package:/home/pi/workspace/ControlTower/install/ct_package:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/pi/workspace/ControlTower/build/interface_package'), ('SSH_CONNECTION', '192.168.0.3 57582 192.168.0.4 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages:/home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/pi/workspace/ControlTower/install/interface_package:/home/pi/workspace/ControlTower/install/ct_package:/opt/ros/humble')]), 'shell': False}
+[28.724543] (-) TimerEvent: {}
+[28.751405] (interface_package) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[28.752360] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/ament_index/resource_index/rosidl_interfaces/interface_package\n'}
+[28.753345] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package\n'}
+[28.754160] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv\n'}
+[28.754687] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail\n'}
+[28.755088] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/node_num__functions.h\n'}
+[28.755760] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/node_num__struct.h\n'}
+[28.756934] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/trash_info__functions.h\n'}
+[28.758599] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/node_num__type_support.h\n'}
+[28.760896] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/trash_info__struct.h\n'}
+[28.763044] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/trash_info__functions.c\n'}
+[28.763820] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/trash_info__type_support.h\n'}
+[28.764776] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/node_num__functions.c\n'}
+[28.766405] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/trash_info.h\n'}
+[28.767717] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/node_num.h\n'}
+[28.768967] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg\n'}
+[28.769884] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail\n'}
+[28.770498] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail/robot_log__struct.h\n'}
+[28.771425] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail/robot_log__functions.c\n'}
+[28.772887] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail/robot_log__type_support.h\n'}
+[28.774322] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail/robot_log__functions.h\n'}
+[28.776506] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/robot_log.h\n'}
+[28.777516] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/rosidl_generator_c__visibility_control.h\n'}
+[28.778396] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/environment/library_path.sh\n'}
+[28.779013] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/environment/library_path.dsv\n'}
+[28.780836] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/lib/libinterface_package__rosidl_generator_c.so\n'}
+[28.784704] (interface_package) StdoutLine: {'line': b'-- Set runtime path of "/home/pi/workspace/ControlTower/install/interface_package/lib/libinterface_package__rosidl_generator_c.so" to ""\n'}
+[28.785827] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package\n'}
+[28.786307] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv\n'}
+[28.786722] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail\n'}
+[28.787077] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/trash_info__rosidl_typesupport_fastrtps_c.h\n'}
+[28.787757] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/node_num__rosidl_typesupport_fastrtps_c.h\n'}
+[28.788716] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg\n'}
+[28.790087] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail\n'}
+[28.790602] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail/robot_log__rosidl_typesupport_fastrtps_c.h\n'}
+[28.791307] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[28.792673] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/lib/libinterface_package__rosidl_typesupport_fastrtps_c.so\n'}
+[28.796124] (interface_package) StdoutLine: {'line': b'-- Set runtime path of "/home/pi/workspace/ControlTower/install/interface_package/lib/libinterface_package__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[28.796920] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package\n'}
+[28.797686] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv\n'}
+[28.798312] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail\n'}
+[28.798735] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/node_num__struct.hpp\n'}
+[28.799359] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/trash_info__struct.hpp\n'}
+[28.800835] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/node_num__builder.hpp\n'}
+[28.802401] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/trash_info__traits.hpp\n'}
+[28.803833] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/node_num__traits.hpp\n'}
+[28.805321] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/trash_info__builder.hpp\n'}
+[28.806689] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/node_num.hpp\n'}
+[28.807987] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/trash_info.hpp\n'}
+[28.809271] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg\n'}
+[28.810222] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail\n'}
+[28.810688] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail/robot_log__struct.hpp\n'}
+[28.811658] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail/robot_log__builder.hpp\n'}
+[28.813045] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail/robot_log__traits.hpp\n'}
+[28.814801] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/robot_log.hpp\n'}
+[28.816197] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package\n'}
+[28.817100] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv\n'}
+[28.817922] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail\n'}
+[28.818518] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/dds_fastrtps\n'}
+[28.818941] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/node_num__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[28.819633] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/trash_info__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[28.821138] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg\n'}
+[28.822025] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail\n'}
+[28.822662] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail/dds_fastrtps\n'}
+[28.823118] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail/robot_log__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[28.824062] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[28.824668] (-) TimerEvent: {}
+[28.825961] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/lib/libinterface_package__rosidl_typesupport_fastrtps_cpp.so\n'}
+[28.828972] (interface_package) StdoutLine: {'line': b'-- Set runtime path of "/home/pi/workspace/ControlTower/install/interface_package/lib/libinterface_package__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[28.830027] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package\n'}
+[28.830728] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv\n'}
+[28.832008] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail\n'}
+[28.832820] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/node_num__rosidl_typesupport_introspection_c.h\n'}
+[28.834437] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/trash_info__type_support.c\n'}
+[28.834976] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/node_num__type_support.c\n'}
+[28.835866] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/trash_info__rosidl_typesupport_introspection_c.h\n'}
+[28.837404] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg\n'}
+[28.838317] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail\n'}
+[28.838801] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail/robot_log__type_support.c\n'}
+[28.839968] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail/robot_log__rosidl_typesupport_introspection_c.h\n'}
+[28.841580] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[28.842842] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/lib/libinterface_package__rosidl_typesupport_introspection_c.so\n'}
+[28.845880] (interface_package) StdoutLine: {'line': b'-- Set runtime path of "/home/pi/workspace/ControlTower/install/interface_package/lib/libinterface_package__rosidl_typesupport_introspection_c.so" to ""\n'}
+[28.846954] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/lib/libinterface_package__rosidl_typesupport_c.so\n'}
+[28.849907] (interface_package) StdoutLine: {'line': b'-- Set runtime path of "/home/pi/workspace/ControlTower/install/interface_package/lib/libinterface_package__rosidl_typesupport_c.so" to ""\n'}
+[28.852485] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package\n'}
+[28.855419] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv\n'}
+[28.856248] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail\n'}
+[28.856678] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/node_num__rosidl_typesupport_introspection_cpp.hpp\n'}
+[28.857312] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/trash_info__type_support.cpp\n'}
+[28.857791] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/trash_info__rosidl_typesupport_introspection_cpp.hpp\n'}
+[28.858214] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/node_num__type_support.cpp\n'}
+[28.858971] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg\n'}
+[28.859877] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail\n'}
+[28.860540] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail/robot_log__rosidl_typesupport_introspection_cpp.hpp\n'}
+[28.867548] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail/robot_log__type_support.cpp\n'}
+[28.868418] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/lib/libinterface_package__rosidl_typesupport_introspection_cpp.so\n'}
+[28.870426] (interface_package) StdoutLine: {'line': b'-- Set runtime path of "/home/pi/workspace/ControlTower/install/interface_package/lib/libinterface_package__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[28.871264] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/lib/libinterface_package__rosidl_typesupport_cpp.so\n'}
+[28.872062] (interface_package) StdoutLine: {'line': b'-- Set runtime path of "/home/pi/workspace/ControlTower/install/interface_package/lib/libinterface_package__rosidl_typesupport_cpp.so" to ""\n'}
+[28.873082] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/environment/pythonpath.sh\n'}
+[28.873705] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/environment/pythonpath.dsv\n'}
+[28.874486] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package-0.0.0-py3.10.egg-info\n'}
+[28.875121] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[28.876580] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[28.878155] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[28.879609] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[28.881099] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package\n'}
+[28.881910] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/interface_package_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[28.883817] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/interface_package_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[28.885783] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/interface_package_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[28.887668] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/_interface_package_s.ep.rosidl_typesupport_c.c\n'}
+[28.889321] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/srv\n'}
+[28.890084] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/srv/_trash_info_s.c\n'}
+[28.891399] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/srv/_node_num.py\n'}
+[28.892854] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/srv/_trash_info.py\n'}
+[28.894463] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/srv/_node_num_s.c\n'}
+[28.895854] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/srv/__init__.py\n'}
+[28.897226] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/libinterface_package__rosidl_generator_py.so\n'}
+[28.899126] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/msg\n'}
+[28.899857] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/msg/_robot_log_s.c\n'}
+[28.901009] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/msg/_robot_log.py\n'}
+[28.902528] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/msg/__init__.py\n'}
+[28.903949] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/_interface_package_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[28.905825] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/_interface_package_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[28.907549] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/__init__.py\n'}
+[28.924899] (-) TimerEvent: {}
+[29.026219] (-) TimerEvent: {}
+[29.095186] (interface_package) StdoutLine: {'line': b"Listing '/home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package'...\n"}
+[29.096122] (interface_package) StdoutLine: {'line': b"Compiling '/home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/__init__.py'...\n"}
+[29.096720] (interface_package) StdoutLine: {'line': b"Listing '/home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/msg'...\n"}
+[29.097089] (interface_package) StdoutLine: {'line': b"Compiling '/home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/msg/__init__.py'...\n"}
+[29.098431] (interface_package) StdoutLine: {'line': b"Compiling '/home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/msg/_robot_log.py'...\n"}
+[29.099878] (interface_package) StdoutLine: {'line': b"Listing '/home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/srv'...\n"}
+[29.101041] (interface_package) StdoutLine: {'line': b"Compiling '/home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/srv/__init__.py'...\n"}
+[29.102436] (interface_package) StdoutLine: {'line': b"Compiling '/home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/srv/_node_num.py'...\n"}
+[29.103902] (interface_package) StdoutLine: {'line': b"Compiling '/home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/srv/_trash_info.py'...\n"}
+[29.123786] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/interface_package_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[29.126345] (-) TimerEvent: {}
+[29.127739] (interface_package) StdoutLine: {'line': b'-- Set runtime path of "/home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/interface_package_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so" to ""\n'}
+[29.129465] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/interface_package_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[29.133669] (interface_package) StdoutLine: {'line': b'-- Set runtime path of "/home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/interface_package_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so" to ""\n'}
+[29.137528] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/interface_package_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[29.138734] (interface_package) StdoutLine: {'line': b'-- Set runtime path of "/home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/interface_package_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so" to ""\n'}
+[29.140044] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/lib/libinterface_package__rosidl_generator_py.so\n'}
+[29.143208] (interface_package) StdoutLine: {'line': b'-- Set runtime path of "/home/pi/workspace/ControlTower/install/interface_package/lib/libinterface_package__rosidl_generator_py.so" to ""\n'}
+[29.144139] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/msg/RobotLog.idl\n'}
+[29.144738] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/srv/NodeNum.idl\n'}
+[29.145290] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/srv/TrashInfo.idl\n'}
+[29.146092] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/msg/RobotLog.msg\n'}
+[29.146912] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/srv/NodeNum.srv\n'}
+[29.147817] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/srv/NodeNum_Request.msg\n'}
+[29.148362] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/srv/NodeNum_Response.msg\n'}
+[29.148769] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/srv/TrashInfo.srv\n'}
+[29.149576] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/srv/TrashInfo_Request.msg\n'}
+[29.150774] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/srv/TrashInfo_Response.msg\n'}
+[29.151461] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/ament_index/resource_index/package_run_dependencies/interface_package\n'}
+[29.152168] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/share/ament_index/resource_index/parent_prefix_path/interface_package\n'}
+[29.153470] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/environment/ament_prefix_path.sh\n'}
+[29.154258] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/environment/ament_prefix_path.dsv\n'}
+[29.155465] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/environment/path.sh\n'}
+[29.156216] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/environment/path.dsv\n'}
+[29.157374] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/local_setup.bash\n'}
+[29.158271] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/local_setup.sh\n'}
+[29.158949] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/local_setup.zsh\n'}
+[29.159375] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/local_setup.dsv\n'}
+[29.160064] (interface_package) StdoutLine: {'line': b'-- Installing: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/package.dsv\n'}
+[29.161645] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/ament_index/resource_index/packages/interface_package\n'}
+[29.162510] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/export_interface_package__rosidl_generator_cExport.cmake\n'}
+[29.163236] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/export_interface_package__rosidl_generator_cExport-noconfig.cmake\n'}
+[29.163987] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/export_interface_package__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[29.164704] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/export_interface_package__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[29.165542] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/export_interface_package__rosidl_generator_cppExport.cmake\n'}
+[29.166400] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/export_interface_package__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[29.167154] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/export_interface_package__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[29.167882] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/interface_package__rosidl_typesupport_introspection_cExport.cmake\n'}
+[29.168666] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/interface_package__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[29.169462] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/interface_package__rosidl_typesupport_cExport.cmake\n'}
+[29.170138] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/interface_package__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[29.170825] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/interface_package__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[29.171450] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/interface_package__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[29.172312] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/interface_package__rosidl_typesupport_cppExport.cmake\n'}
+[29.172955] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/interface_package__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[29.176870] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/export_interface_package__rosidl_generator_pyExport.cmake\n'}
+[29.178390] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/export_interface_package__rosidl_generator_pyExport-noconfig.cmake\n'}
+[29.179277] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/rosidl_cmake-extras.cmake\n'}
+[29.179784] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[29.180252] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[29.180840] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[29.181488] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[29.182089] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[29.182679] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[29.184950] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/interface_packageConfig.cmake\n'}
+[29.188761] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/interface_packageConfig-version.cmake\n'}
+[29.190114] (interface_package) StdoutLine: {'line': b'-- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/package.xml\n'}
+[29.190660] (interface_package) CommandEnded: {'returncode': 0}
+[29.226759] (-) TimerEvent: {}
+[29.329344] (-) TimerEvent: {}
+[29.430233] (-) TimerEvent: {}
+[29.531231] (-) TimerEvent: {}
+[29.631996] (-) TimerEvent: {}
+[29.732807] (-) TimerEvent: {}
+[29.833553] (-) TimerEvent: {}
+[29.888334] (interface_package) JobEnded: {'identifier': 'interface_package', 'rc': 0}
+[29.891761] (-) EventReactorShutdown: {}

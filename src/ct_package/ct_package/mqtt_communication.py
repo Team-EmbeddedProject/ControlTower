@@ -1,55 +1,3 @@
-# import rclpy
-# from rclpy.node import Node
-# #import paho.mqtt.client as mqtt
-# #import ssl
-# from interface_package.msg import RobotLog
-# from interface_package.srv import TrashInfo
-
-# # AWS IoT Core - Connect, Disconnet 하는 함수 생성
-# # MQTT 프로토콜로 전송하는 함수
-# class MqttCommunication(Node):
-#     def __init__(self):
-#         super().__init__('mqtt_communication')
-
-
-#         #AWS Iot Core 엔드포인트 설정
-        
-#         self.trash_info_server = self.create_service(TrashInfo, 'trash_detection', self.trash_detection_callback)
-#         self.log_subscriber = self.create_subscription(RobotLog, 'robot_log', self.robot_log_callback, 10)
-#         self.get_logger().info('MQTT Communication start')
-    
-#     def trash_detection_callback(self, request, response):
-#         # AWS IoT Core에 Trash Data 저장하는 코드 작성
-#         # 성공하면 response.success = True 반환, 실패하면 Fasle
-#         response.success = True
-#         self.get_logger().info(f'Request Data - {request.timestamp} {request.robot_id} {request.trash_type} {request.trash_location}')
-#         return response
-
-#     def robot_log_callback(self, msg):
-#         # AWS IoT Core에 Robot Log 저장하는 코드 작성
-#         self.get_logger().info(f'Subscribe Data: {msg.timestamp} {msg.robot_id} {msg.robot_location} {msg.status}')
-
-# def customCallback(client, userdata, message):
-#     print("receivced a new messsage: ")
-#     print(message.payload)
-#     print("from topic: ")
-#     print(message.topic)
-#     print ("----------\n")
-
-# def main(args=None):
-#     rclpy.init(args=args)
-#     mqtt_communication = MqttCommunication()
-#     try:
-#         rclpy.spin(mqtt_communication)
-#     except KeyboardInterrupt:
-#         pass
-#     finally:
-#         mqtt_communication.destroy_node()
-#         rclpy.shutdown()
-
-# if __name__ == '__main__':
-#     main()
-
 from awsiot import mqtt5_client_builder
 from awscrt import mqtt5, http
 import threading
@@ -58,12 +6,10 @@ import time
 import json
 import rclpy
 from rclpy.node import Node
-from ct_package.command_line_utils import CommandLineUtils
 from interface_package.msg import RobotLog
 from interface_package.srv import TrashInfo
 
 TIMEOUT = 100
-topic_filter = "test/topic"
 
 class MqttCommunication(Node):
     def __init__(self):
@@ -73,15 +19,50 @@ class MqttCommunication(Node):
         self.trash_info_server = self.create_service(TrashInfo, 'trash_detection', self.trash_detection_callback)
         self.log_subscriber = self.create_subscription(RobotLog, 'robot_log', self.robot_log_callback, 10)
         self.get_logger().info('MQTT Communication start')
+        
+        # Initialize parameters
+        self.declare_parameters(
+            namespace='',
+            parameters=[
+                ('input_endpoint', ''),
+                ('input_port', 0),
+                ('input_cert', ''),
+                ('input_key', ''),
+                ('input_ca', ''),
+                ('input_clientId', ''),
+                ('trash_info_topic', ''),
+                ('robot_log_topic', ''),
+                ('input_count', 0),
+                ('input_proxy_host', ''),
+                ('input_proxy_port', 0),
+                ('input_is_ci', False),
+            ]
+        )
 
         # Initialize MQTT
-        self.cmdData = CommandLineUtils.parse_sample_input_mqtt5_pubsub()
+        self.cmdData = self.get_cmd_data_from_parameters()
         self.received_count = 0
         self.received_all_event = threading.Event()
         self.future_stopped = Future()
         self.future_connection_success = Future()
 
         self.setup_mqtt_client()
+
+    def get_cmd_data_from_parameters(self):
+        cmdData = type('', (), {})()  # Create an empty object to hold attributes
+        cmdData.input_endpoint = self.get_parameter('input_endpoint').get_parameter_value().string_value
+        cmdData.input_port = self.get_parameter('input_port').get_parameter_value().integer_value
+        cmdData.input_cert = self.get_parameter('input_cert').get_parameter_value().string_value
+        cmdData.input_key = self.get_parameter('input_key').get_parameter_value().string_value
+        cmdData.input_ca = self.get_parameter('input_ca').get_parameter_value().string_value
+        cmdData.input_clientId = self.get_parameter('input_clientId').get_parameter_value().string_value
+        cmdData.trash_info_topic = self.get_parameter('trash_info_topic').get_parameter_value().string_value
+        cmdData.robot_log_topic = self.get_parameter('robot_log_topic').get_parameter_value().string_value
+        cmdData.input_count = self.get_parameter('input_count').get_parameter_value().integer_value
+        cmdData.input_proxy_host = self.get_parameter('input_proxy_host').get_parameter_value().string_value
+        cmdData.input_proxy_port = self.get_parameter('input_proxy_port').get_parameter_value().integer_value
+        cmdData.input_is_ci = self.get_parameter('input_is_ci').get_parameter_value().bool_value
+        return cmdData
 
     def setup_mqtt_client(self):
         proxy_options = None
@@ -111,8 +92,6 @@ class MqttCommunication(Node):
         if not self.cmdData.input_is_ci:
             self.get_logger().info(
                 f"Connected to endpoint:'{self.cmdData.input_endpoint}' with Client ID:'{self.cmdData.input_clientId}' with reason_code:{repr(connack_packet.reason_code)}")
-
-        self.subscribe_to_topic(self.cmdData.input_topic)
 
     def subscribe_to_topic(self, topic):
         self.get_logger().info(f"Subscribing to topic '{topic}'...")
@@ -149,9 +128,10 @@ class MqttCommunication(Node):
             "timestamp": str(request.timestamp),
             "robot_id": request.robot_id,
             "trash_type": request.trash_type,
-            "trash_location": request.trash_location
+            "latitude": float(request.latitude),
+            "longitude": float(request.longitude)
         }
-        self.publish_to_mqtt(json.dumps(message))
+        self.publish_to_mqtt(json.dumps(message), self.cmdData.trash_info_topic)
         response.success = True
         self.get_logger().info(f'Published TrashInfo Data - {message}')
         return response
@@ -164,13 +144,13 @@ class MqttCommunication(Node):
             "robot_location": msg.robot_location,
             "status": msg.status
         }
-        self.publish_to_mqtt(json.dumps(message))
+        self.publish_to_mqtt(json.dumps(message), self.cmdData.robot_log_topic)
         self.get_logger().info(f'Published RobotLog Data - {message}')
 
-    def publish_to_mqtt(self, message):
-        self.get_logger().info(f"Publishing message to topic '{self.cmdData.input_topic}': {message}")
+    def publish_to_mqtt(self, message, input_topic):
+        self.get_logger().info(f"Publishing message to topic '{input_topic}': {message}")
         publish_future = self.client.publish(mqtt5.PublishPacket(
-            topic=self.cmdData.input_topic,
+            topic=input_topic,
             payload=message.encode('utf-8'),
             qos=mqtt5.QoS.AT_LEAST_ONCE
         ))

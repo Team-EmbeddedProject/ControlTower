@@ -1,0 +1,301 @@
+[1.294s] Invoking command in '/home/pi/workspace/ControlTower/build/interface_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/workspace/ControlTower/install/ct_package:/opt/ros/humble /usr/bin/cmake --build /home/pi/workspace/ControlTower/build/interface_package -- -j4 -l4
+[1.419s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[2.161s] -- Found builtin_interfaces: 1.2.1 (/opt/ros/humble/share/builtin_interfaces/cmake)
+[2.353s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[2.369s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[2.410s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[2.468s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.544s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.609s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[4.039s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[5.646s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[6.243s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[6.354s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[6.467s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[6.467s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[6.468s] -- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so
+[6.528s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[6.622s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[6.624s] -- Configured cppcheck include dirs: 
+[6.624s] -- Configured cppcheck exclude dirs and/or files: 
+[6.632s] -- Added test 'lint_cmake' to check CMake code style
+[6.651s] -- Added test 'uncrustify' to check C / C++ code style
+[6.651s] -- Configured uncrustify additional arguments: 
+[6.655s] -- Added test 'xmllint' to check XML markup files
+[6.666s] -- Configuring done
+[6.876s] -- Generating done
+[6.894s] -- Build files have been written to: /home/pi/workspace/ControlTower/build/interface_package
+[7.005s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[7.061s] [  4%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[7.130s] [  4%] Built target ament_cmake_python_copy_interface_package
+[8.644s] running egg_info
+[8.652s] writing interface_package.egg-info/PKG-INFO
+[8.657s] writing dependency_links to interface_package.egg-info/dependency_links.txt
+[8.661s] writing top-level names to interface_package.egg-info/top_level.txt
+[8.672s] reading manifest file 'interface_package.egg-info/SOURCES.txt'
+[8.678s] writing manifest file 'interface_package.egg-info/SOURCES.txt'
+[8.856s] [  4%] Built target ament_cmake_python_build_interface_package_egg
+[9.333s] [35m[1mConsolidate compiler generated dependencies of target interface_package__rosidl_generator_c[0m
+[9.372s] [  4%] Built target interface_package__cpp
+[9.400s] [  6%] [32mBuilding C object CMakeFiles/interface_package__rosidl_generator_c.dir/rosidl_generator_c/interface_package/srv/detail/node_num__functions.c.o[0m
+[9.403s] [  8%] [32mBuilding C object CMakeFiles/interface_package__rosidl_generator_c.dir/rosidl_generator_c/interface_package/srv/detail/trash_info__functions.c.o[0m
+[9.408s] [ 10%] [32mBuilding C object CMakeFiles/interface_package__rosidl_generator_c.dir/rosidl_generator_c/interface_package/msg/detail/robot_log__functions.c.o[0m
+[9.428s] [ 12%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[10.256s] [ 17%] [32m[1mLinking C shared library libinterface_package__rosidl_generator_c.so[0m
+[10.260s] [ 17%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[10.265s] [ 19%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[10.566s] [ 19%] Built target interface_package__rosidl_generator_c
+[10.628s] [ 21%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[11.159s] [35m[1mConsolidate compiler generated dependencies of target interface_package__rosidl_typesupport_cpp[0m
+[11.371s] [ 23%] [32mBuilding CXX object CMakeFiles/interface_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interface_package/msg/robot_log__type_support.cpp.o[0m
+[12.386s] [35m[1mConsolidate compiler generated dependencies of target interface_package__rosidl_typesupport_introspection_cpp[0m
+[12.477s] [ 25%] [32mBuilding CXX object CMakeFiles/interface_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interface_package/msg/detail/robot_log__type_support.cpp.o[0m
+[12.527s] [35m[1mConsolidate compiler generated dependencies of target interface_package__rosidl_typesupport_fastrtps_cpp[0m
+[12.626s] [ 27%] [32mBuilding CXX object CMakeFiles/interface_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interface_package/msg/detail/dds_fastrtps/robot_log__type_support.cpp.o[0m
+[13.014s] [35m[1mConsolidate compiler generated dependencies of target interface_package__rosidl_typesupport_fastrtps_c[0m
+[13.166s] [ 29%] [32mBuilding CXX object CMakeFiles/interface_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interface_package/msg/detail/robot_log__type_support_c.cpp.o[0m
+[13.992s] [ 31%] [32mBuilding CXX object CMakeFiles/interface_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interface_package/srv/node_num__type_support.cpp.o[0m
+[15.200s] [ 34%] [32mBuilding CXX object CMakeFiles/interface_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interface_package/srv/detail/node_num__type_support.cpp.o[0m
+[15.443s] [ 36%] [32mBuilding CXX object CMakeFiles/interface_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interface_package/srv/detail/dds_fastrtps/node_num__type_support.cpp.o[0m
+[15.494s] [ 38%] [32mBuilding CXX object CMakeFiles/interface_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interface_package/srv/detail/node_num__type_support_c.cpp.o[0m
+[15.838s] [ 40%] [32mBuilding CXX object CMakeFiles/interface_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interface_package/srv/trash_info__type_support.cpp.o[0m
+[17.821s] [ 42%] [32m[1mLinking CXX shared library libinterface_package__rosidl_typesupport_cpp.so[0m
+[17.968s] [ 44%] [32mBuilding CXX object CMakeFiles/interface_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interface_package/srv/detail/trash_info__type_support_c.cpp.o[0m
+[17.994s] [ 46%] [32mBuilding CXX object CMakeFiles/interface_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interface_package/srv/detail/trash_info__type_support.cpp.o[0m
+[18.049s] [ 46%] Built target interface_package__rosidl_typesupport_cpp
+[18.102s] [ 48%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[18.296s] [ 51%] [32mBuilding CXX object CMakeFiles/interface_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interface_package/srv/detail/dds_fastrtps/trash_info__type_support.cpp.o[0m
+[20.476s] [ 53%] [32m[1mLinking CXX shared library libinterface_package__rosidl_typesupport_fastrtps_c.so[0m
+[20.517s] [ 55%] [32m[1mLinking CXX shared library libinterface_package__rosidl_typesupport_introspection_cpp.so[0m
+[20.523s] [35m[1mConsolidate compiler generated dependencies of target interface_package__rosidl_typesupport_introspection_c[0m
+[20.775s] [ 57%] [32mBuilding C object CMakeFiles/interface_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interface_package/msg/detail/robot_log__type_support.c.o[0m
+[21.006s] [ 57%] Built target interface_package__rosidl_typesupport_fastrtps_c
+[21.105s] [ 59%] [32mBuilding C object CMakeFiles/interface_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interface_package/srv/detail/node_num__type_support.c.o[0m
+[21.108s] [ 61%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[21.159s] [ 61%] Built target interface_package__rosidl_typesupport_introspection_cpp
+[21.211s] [ 63%] [32mBuilding C object CMakeFiles/interface_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interface_package/srv/detail/trash_info__type_support.c.o[0m
+[21.338s] [ 65%] [32m[1mLinking CXX shared library libinterface_package__rosidl_typesupport_fastrtps_cpp.so[0m
+[21.464s] [ 68%] [32m[1mLinking C shared library libinterface_package__rosidl_typesupport_introspection_c.so[0m
+[21.667s] [ 68%] Built target interface_package__rosidl_typesupport_introspection_c
+[21.708s] [ 68%] Built target interface_package__rosidl_typesupport_fastrtps_cpp
+[22.530s] [35m[1mConsolidate compiler generated dependencies of target interface_package__rosidl_typesupport_c[0m
+[22.591s] [ 70%] [32mBuilding CXX object CMakeFiles/interface_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/interface_package/msg/robot_log__type_support.cpp.o[0m
+[22.594s] [ 72%] [32mBuilding CXX object CMakeFiles/interface_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/interface_package/srv/node_num__type_support.cpp.o[0m
+[22.595s] [ 74%] [32mBuilding CXX object CMakeFiles/interface_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/interface_package/srv/trash_info__type_support.cpp.o[0m
+[22.772s] [ 76%] [32m[1mLinking CXX shared library libinterface_package__rosidl_typesupport_c.so[0m
+[22.942s] [ 76%] Built target interface_package__rosidl_typesupport_c
+[23.030s] [ 76%] Built target interface_package
+[23.119s] [ 78%] [34m[1mGenerating Python code for ROS interfaces[0m
+[25.754s] [ 78%] Built target interface_package__py
+[25.801s] [35m[1mConsolidate compiler generated dependencies of target interface_package__rosidl_generator_py[0m
+[25.893s] [ 80%] [32mBuilding C object CMakeFiles/interface_package__rosidl_generator_py.dir/rosidl_generator_py/interface_package/msg/_robot_log_s.c.o[0m
+[25.903s] [ 82%] [32mBuilding C object CMakeFiles/interface_package__rosidl_generator_py.dir/rosidl_generator_py/interface_package/srv/_trash_info_s.c.o[0m
+[25.914s] [ 85%] [32mBuilding C object CMakeFiles/interface_package__rosidl_generator_py.dir/rosidl_generator_py/interface_package/srv/_node_num_s.c.o[0m
+[26.581s] [ 87%] [32m[1mLinking C shared library rosidl_generator_py/interface_package/libinterface_package__rosidl_generator_py.so[0m
+[26.772s] [ 87%] Built target interface_package__rosidl_generator_py
+[26.833s] [35m[1mConsolidate compiler generated dependencies of target interface_package__rosidl_typesupport_fastrtps_c__pyext[0m
+[26.834s] [35m[1mConsolidate compiler generated dependencies of target interface_package__rosidl_typesupport_introspection_c__pyext[0m
+[26.834s] [35m[1mConsolidate compiler generated dependencies of target interface_package__rosidl_typesupport_c__pyext[0m
+[26.896s] [ 89%] [32mBuilding C object CMakeFiles/interface_package__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/interface_package/_interface_package_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[26.927s] [ 91%] [32mBuilding C object CMakeFiles/interface_package__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/interface_package/_interface_package_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[27.000s] [ 93%] [32mBuilding C object CMakeFiles/interface_package__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/interface_package/_interface_package_s.ep.rosidl_typesupport_c.c.o[0m
+[27.634s] [ 95%] [32m[1mLinking C shared library rosidl_generator_py/interface_package/interface_package_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so[0m
+[27.672s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/interface_package/interface_package_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so[0m
+[27.829s] [100%] [32m[1mLinking C shared library rosidl_generator_py/interface_package/interface_package_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so[0m
+[27.876s] [100%] Built target interface_package__rosidl_typesupport_fastrtps_c__pyext
+[27.892s] [100%] Built target interface_package__rosidl_typesupport_introspection_c__pyext
+[28.004s] [100%] Built target interface_package__rosidl_typesupport_c__pyext
+[28.051s] Invoked command in '/home/pi/workspace/ControlTower/build/interface_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/workspace/ControlTower/install/ct_package:/opt/ros/humble /usr/bin/cmake --build /home/pi/workspace/ControlTower/build/interface_package -- -j4 -l4
+[28.681s] Invoking command in '/home/pi/workspace/ControlTower/build/interface_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/workspace/ControlTower/install/ct_package:/opt/ros/humble /usr/bin/cmake --install /home/pi/workspace/ControlTower/build/interface_package
+[28.711s] -- Install configuration: ""
+[28.712s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/ament_index/resource_index/rosidl_interfaces/interface_package
+[28.713s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package
+[28.714s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv
+[28.714s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail
+[28.715s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/node_num__functions.h
+[28.716s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/node_num__struct.h
+[28.717s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/trash_info__functions.h
+[28.719s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/node_num__type_support.h
+[28.721s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/trash_info__struct.h
+[28.723s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/trash_info__functions.c
+[28.724s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/trash_info__type_support.h
+[28.725s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/node_num__functions.c
+[28.726s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/trash_info.h
+[28.728s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/node_num.h
+[28.729s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg
+[28.730s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail
+[28.730s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail/robot_log__struct.h
+[28.731s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail/robot_log__functions.c
+[28.733s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail/robot_log__type_support.h
+[28.734s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail/robot_log__functions.h
+[28.736s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/robot_log.h
+[28.738s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/rosidl_generator_c__visibility_control.h
+[28.738s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/environment/library_path.sh
+[28.739s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/environment/library_path.dsv
+[28.741s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/lib/libinterface_package__rosidl_generator_c.so
+[28.745s] -- Set runtime path of "/home/pi/workspace/ControlTower/install/interface_package/lib/libinterface_package__rosidl_generator_c.so" to ""
+[28.746s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package
+[28.746s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv
+[28.746s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail
+[28.747s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/trash_info__rosidl_typesupport_fastrtps_c.h
+[28.747s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/node_num__rosidl_typesupport_fastrtps_c.h
+[28.749s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg
+[28.750s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail
+[28.750s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail/robot_log__rosidl_typesupport_fastrtps_c.h
+[28.751s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[28.753s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/lib/libinterface_package__rosidl_typesupport_fastrtps_c.so
+[28.756s] -- Set runtime path of "/home/pi/workspace/ControlTower/install/interface_package/lib/libinterface_package__rosidl_typesupport_fastrtps_c.so" to ""
+[28.757s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package
+[28.758s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv
+[28.758s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail
+[28.758s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/node_num__struct.hpp
+[28.759s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/trash_info__struct.hpp
+[28.761s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/node_num__builder.hpp
+[28.762s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/trash_info__traits.hpp
+[28.764s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/node_num__traits.hpp
+[28.765s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/trash_info__builder.hpp
+[28.766s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/node_num.hpp
+[28.768s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/trash_info.hpp
+[28.769s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg
+[28.770s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail
+[28.770s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail/robot_log__struct.hpp
+[28.771s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail/robot_log__builder.hpp
+[28.773s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail/robot_log__traits.hpp
+[28.775s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/robot_log.hpp
+[28.776s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package
+[28.777s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv
+[28.778s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail
+[28.778s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/dds_fastrtps
+[28.779s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/node_num__rosidl_typesupport_fastrtps_cpp.hpp
+[28.779s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/trash_info__rosidl_typesupport_fastrtps_cpp.hpp
+[28.781s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg
+[28.782s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail
+[28.782s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail/dds_fastrtps
+[28.783s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail/robot_log__rosidl_typesupport_fastrtps_cpp.hpp
+[28.784s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[28.786s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/lib/libinterface_package__rosidl_typesupport_fastrtps_cpp.so
+[28.789s] -- Set runtime path of "/home/pi/workspace/ControlTower/install/interface_package/lib/libinterface_package__rosidl_typesupport_fastrtps_cpp.so" to ""
+[28.790s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package
+[28.791s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv
+[28.792s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail
+[28.793s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/node_num__rosidl_typesupport_introspection_c.h
+[28.794s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/trash_info__type_support.c
+[28.795s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/node_num__type_support.c
+[28.796s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/trash_info__rosidl_typesupport_introspection_c.h
+[28.797s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg
+[28.798s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail
+[28.799s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail/robot_log__type_support.c
+[28.800s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail/robot_log__rosidl_typesupport_introspection_c.h
+[28.801s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[28.803s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/lib/libinterface_package__rosidl_typesupport_introspection_c.so
+[28.806s] -- Set runtime path of "/home/pi/workspace/ControlTower/install/interface_package/lib/libinterface_package__rosidl_typesupport_introspection_c.so" to ""
+[28.807s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/lib/libinterface_package__rosidl_typesupport_c.so
+[28.812s] -- Set runtime path of "/home/pi/workspace/ControlTower/install/interface_package/lib/libinterface_package__rosidl_typesupport_c.so" to ""
+[28.812s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package
+[28.815s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv
+[28.816s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail
+[28.817s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/node_num__rosidl_typesupport_introspection_cpp.hpp
+[28.817s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/trash_info__type_support.cpp
+[28.818s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/trash_info__rosidl_typesupport_introspection_cpp.hpp
+[28.818s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/srv/detail/node_num__type_support.cpp
+[28.819s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg
+[28.820s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail
+[28.820s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail/robot_log__rosidl_typesupport_introspection_cpp.hpp
+[28.828s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/include/interface_package/interface_package/msg/detail/robot_log__type_support.cpp
+[28.828s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/lib/libinterface_package__rosidl_typesupport_introspection_cpp.so
+[28.831s] -- Set runtime path of "/home/pi/workspace/ControlTower/install/interface_package/lib/libinterface_package__rosidl_typesupport_introspection_cpp.so" to ""
+[28.831s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/lib/libinterface_package__rosidl_typesupport_cpp.so
+[28.832s] -- Set runtime path of "/home/pi/workspace/ControlTower/install/interface_package/lib/libinterface_package__rosidl_typesupport_cpp.so" to ""
+[28.833s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/environment/pythonpath.sh
+[28.833s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/environment/pythonpath.dsv
+[28.834s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package-0.0.0-py3.10.egg-info
+[28.835s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package-0.0.0-py3.10.egg-info/dependency_links.txt
+[28.836s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package-0.0.0-py3.10.egg-info/top_level.txt
+[28.838s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package-0.0.0-py3.10.egg-info/SOURCES.txt
+[28.839s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package-0.0.0-py3.10.egg-info/PKG-INFO
+[28.841s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package
+[28.842s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/interface_package_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[28.844s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/interface_package_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[28.846s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/interface_package_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[28.847s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/_interface_package_s.ep.rosidl_typesupport_c.c
+[28.849s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/srv
+[28.850s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/srv/_trash_info_s.c
+[28.851s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/srv/_node_num.py
+[28.853s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/srv/_trash_info.py
+[28.854s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/srv/_node_num_s.c
+[28.856s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/srv/__init__.py
+[28.857s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/libinterface_package__rosidl_generator_py.so
+[28.859s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/msg
+[28.860s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/msg/_robot_log_s.c
+[28.861s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/msg/_robot_log.py
+[28.862s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/msg/__init__.py
+[28.864s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/_interface_package_s.ep.rosidl_typesupport_introspection_c.c
+[28.866s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/_interface_package_s.ep.rosidl_typesupport_fastrtps_c.c
+[28.867s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/__init__.py
+[29.055s] Listing '/home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package'...
+[29.056s] Compiling '/home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/__init__.py'...
+[29.056s] Listing '/home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/msg'...
+[29.057s] Compiling '/home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/msg/__init__.py'...
+[29.059s] Compiling '/home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/msg/_robot_log.py'...
+[29.060s] Listing '/home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/srv'...
+[29.061s] Compiling '/home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/srv/__init__.py'...
+[29.063s] Compiling '/home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/srv/_node_num.py'...
+[29.064s] Compiling '/home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/srv/_trash_info.py'...
+[29.085s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/interface_package_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[29.088s] -- Set runtime path of "/home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/interface_package_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so" to ""
+[29.089s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/interface_package_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[29.094s] -- Set runtime path of "/home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/interface_package_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so" to ""
+[29.097s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/interface_package_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[29.099s] -- Set runtime path of "/home/pi/workspace/ControlTower/install/interface_package/local/lib/python3.10/dist-packages/interface_package/interface_package_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so" to ""
+[29.100s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/lib/libinterface_package__rosidl_generator_py.so
+[29.103s] -- Set runtime path of "/home/pi/workspace/ControlTower/install/interface_package/lib/libinterface_package__rosidl_generator_py.so" to ""
+[29.104s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/msg/RobotLog.idl
+[29.104s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/srv/NodeNum.idl
+[29.105s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/srv/TrashInfo.idl
+[29.106s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/msg/RobotLog.msg
+[29.107s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/srv/NodeNum.srv
+[29.108s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/srv/NodeNum_Request.msg
+[29.108s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/srv/NodeNum_Response.msg
+[29.109s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/srv/TrashInfo.srv
+[29.109s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/srv/TrashInfo_Request.msg
+[29.111s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/srv/TrashInfo_Response.msg
+[29.111s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/ament_index/resource_index/package_run_dependencies/interface_package
+[29.112s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/share/ament_index/resource_index/parent_prefix_path/interface_package
+[29.114s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/environment/ament_prefix_path.sh
+[29.114s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/environment/ament_prefix_path.dsv
+[29.115s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/environment/path.sh
+[29.116s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/environment/path.dsv
+[29.118s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/local_setup.bash
+[29.118s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/local_setup.sh
+[29.119s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/local_setup.zsh
+[29.119s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/local_setup.dsv
+[29.120s] -- Installing: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/package.dsv
+[29.121s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/ament_index/resource_index/packages/interface_package
+[29.122s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/export_interface_package__rosidl_generator_cExport.cmake
+[29.123s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/export_interface_package__rosidl_generator_cExport-noconfig.cmake
+[29.124s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/export_interface_package__rosidl_typesupport_fastrtps_cExport.cmake
+[29.124s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/export_interface_package__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[29.125s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/export_interface_package__rosidl_generator_cppExport.cmake
+[29.126s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/export_interface_package__rosidl_typesupport_fastrtps_cppExport.cmake
+[29.127s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/export_interface_package__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[29.128s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/interface_package__rosidl_typesupport_introspection_cExport.cmake
+[29.128s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/interface_package__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[29.129s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/interface_package__rosidl_typesupport_cExport.cmake
+[29.130s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/interface_package__rosidl_typesupport_cExport-noconfig.cmake
+[29.131s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/interface_package__rosidl_typesupport_introspection_cppExport.cmake
+[29.131s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/interface_package__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[29.132s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/interface_package__rosidl_typesupport_cppExport.cmake
+[29.133s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/interface_package__rosidl_typesupport_cppExport-noconfig.cmake
+[29.137s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/export_interface_package__rosidl_generator_pyExport.cmake
+[29.139s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/export_interface_package__rosidl_generator_pyExport-noconfig.cmake
+[29.139s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/rosidl_cmake-extras.cmake
+[29.140s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/ament_cmake_export_dependencies-extras.cmake
+[29.140s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/ament_cmake_export_include_directories-extras.cmake
+[29.141s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/ament_cmake_export_libraries-extras.cmake
+[29.141s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/ament_cmake_export_targets-extras.cmake
+[29.142s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[29.143s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[29.147s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/interface_packageConfig.cmake
+[29.149s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/cmake/interface_packageConfig-version.cmake
+[29.150s] -- Up-to-date: /home/pi/workspace/ControlTower/install/interface_package/share/interface_package/package.xml
+[29.151s] Invoked command in '/home/pi/workspace/ControlTower/build/interface_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/workspace/ControlTower/install/ct_package:/opt/ros/humble /usr/bin/cmake --install /home/pi/workspace/ControlTower/build/interface_package

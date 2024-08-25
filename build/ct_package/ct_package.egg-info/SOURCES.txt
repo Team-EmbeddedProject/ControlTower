@@ -13,13 +13,16 @@ ct_package/arm_planner.py
 ct_package/cam_coord_transform.py
 ct_package/camera_calibration.py
 ct_package/camera_subscriber.py
+ct_package/command_line_utils.py
 ct_package/data_publisher.py
 ct_package/mqtt_communication.py
 ct_package/path_planner.py
 ct_package/robot_coord_transform.py
 ct_package/trash_detector.py
 launch/map_server.launch.py
+launch/mqtt_communication.launch.py
 launch/robot_arm.launch.py
+params/mqtt_param.yaml
 resource/ct_package
 test/test_copyright.py
 test/test_flake8.py

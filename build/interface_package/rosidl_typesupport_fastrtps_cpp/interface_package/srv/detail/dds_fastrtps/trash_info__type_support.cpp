@@ -64,10 +64,10 @@ cdr_serialize(
   cdr << ros_message.robot_id;
   // Member: trash_type
   cdr << ros_message.trash_type;
-  // Member: trash_location
-  {
-    cdr << ros_message.trash_location;
-  }
+  // Member: latitude
+  cdr << ros_message.latitude;
+  // Member: longitude
+  cdr << ros_message.longitude;
   return true;
 }
 
@@ -87,10 +87,11 @@ cdr_deserialize(
   // Member: trash_type
   cdr >> ros_message.trash_type;
 
-  // Member: trash_location
-  {
-    cdr >> ros_message.trash_location;
-  }
+  // Member: latitude
+  cdr >> ros_message.latitude;
+
+  // Member: longitude
+  cdr >> ros_message.longitude;
 
   return true;
 }
@@ -123,11 +124,16 @@ get_serialized_size(
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
     (ros_message.trash_type.size() + 1);
-  // Member: trash_location
+  // Member: latitude
   {
-    size_t array_size = 3;
-    size_t item_size = sizeof(ros_message.trash_location[0]);
-    current_alignment += array_size * item_size +
+    size_t item_size = sizeof(ros_message.latitude);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: longitude
+  {
+    size_t item_size = sizeof(ros_message.longitude);
+    current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
@@ -195,9 +201,18 @@ max_serialized_size_TrashInfo_Request(
     }
   }
 
-  // Member: trash_location
+  // Member: latitude
   {
-    size_t array_size = 3;
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Member: longitude
+  {
+    size_t array_size = 1;
 
     last_member_size = array_size * sizeof(uint32_t);
     current_alignment += array_size * sizeof(uint32_t) +
@@ -212,7 +227,7 @@ max_serialized_size_TrashInfo_Request(
     using DataType = interface_package::srv::TrashInfo_Request;
     is_plain =
       (
-      offsetof(DataType, trash_location) +
+      offsetof(DataType, longitude) +
       last_member_size
       ) == ret_val;
   }
