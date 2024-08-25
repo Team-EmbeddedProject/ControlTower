@@ -1,0 +1,4 @@
+int16 current_x
+int16 current_y
+int16 next_x
+int16 next_y

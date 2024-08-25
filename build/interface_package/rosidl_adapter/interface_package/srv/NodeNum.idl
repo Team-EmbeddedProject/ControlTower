@@ -1,0 +1,21 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from interface_package/srv/NodeNum.srv
+// generated code does not contain a copyright notice
+
+
+module interface_package {
+  module srv {
+    struct NodeNum_Request {
+      int16 current_x;
+
+      int16 current_y;
+
+      int16 next_x;
+
+      int16 next_y;
+    };
+    struct NodeNum_Response {
+      boolean success;
+    };
+  };
+};

@@ -1,0 +1,20 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from interface_package/msg/RobotLog.msg
+// generated code does not contain a copyright notice
+
+#include "builtin_interfaces/msg/Time.idl"
+
+module interface_package {
+  module msg {
+    typedef float float__3[3];
+    struct RobotLog {
+      builtin_interfaces::msg::Time timestamp;
+
+      int32 robot_id;
+
+      float__3 robot_location;
+
+      string status;
+    };
+  };
+};

@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from interface_package/srv/TrashInfo.srv
+// generated code does not contain a copyright notice
+
+#include "builtin_interfaces/msg/Time.idl"
+
+module interface_package {
+  module srv {
+    typedef float float__3[3];
+    struct TrashInfo_Request {
+      builtin_interfaces::msg::Time timestamp;
+
+      int32 robot_id;
+
+      string trash_type;
+
+      float__3 trash_location;
+    };
+    struct TrashInfo_Response {
+      boolean success;
+    };
+  };
+};

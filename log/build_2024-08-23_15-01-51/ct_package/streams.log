@@ -1,0 +1,71 @@
+[3.736s] Invoking command in '/home/pi/workspace/ControlTower/src/ct_package': PYTHONPATH=/home/pi/workspace/ControlTower/build/ct_package/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/ct_package build --build-base /home/pi/workspace/ControlTower/build/ct_package/build install --record /home/pi/workspace/ControlTower/build/ct_package/install.log --single-version-externally-managed install_data
+[5.505s] running egg_info
+[5.508s] creating ../../build/ct_package/ct_package.egg-info
+[5.509s] writing ../../build/ct_package/ct_package.egg-info/PKG-INFO
+[5.512s] writing dependency_links to ../../build/ct_package/ct_package.egg-info/dependency_links.txt
+[5.513s] writing entry points to ../../build/ct_package/ct_package.egg-info/entry_points.txt
+[5.515s] writing requirements to ../../build/ct_package/ct_package.egg-info/requires.txt
+[5.516s] writing top-level names to ../../build/ct_package/ct_package.egg-info/top_level.txt
+[5.518s] writing manifest file '../../build/ct_package/ct_package.egg-info/SOURCES.txt'
+[5.529s] reading manifest file '../../build/ct_package/ct_package.egg-info/SOURCES.txt'
+[5.534s] writing manifest file '../../build/ct_package/ct_package.egg-info/SOURCES.txt'
+[5.535s] running build
+[5.536s] running build_py
+[5.536s] creating /home/pi/workspace/ControlTower/build/ct_package/build
+[5.537s] creating /home/pi/workspace/ControlTower/build/ct_package/build/lib
+[5.538s] creating /home/pi/workspace/ControlTower/build/ct_package/build/lib/ct_package
+[5.538s] copying ct_package/trash_detector.py -> /home/pi/workspace/ControlTower/build/ct_package/build/lib/ct_package
+[5.539s] copying ct_package/camera_subscriber.py -> /home/pi/workspace/ControlTower/build/ct_package/build/lib/ct_package
+[5.540s] copying ct_package/robot_coord_transform.py -> /home/pi/workspace/ControlTower/build/ct_package/build/lib/ct_package
+[5.540s] copying ct_package/cam_coord_transform.py -> /home/pi/workspace/ControlTower/build/ct_package/build/lib/ct_package
+[5.541s] copying ct_package/arm_planner.py -> /home/pi/workspace/ControlTower/build/ct_package/build/lib/ct_package
+[5.543s] copying ct_package/data_publisher.py -> /home/pi/workspace/ControlTower/build/ct_package/build/lib/ct_package
+[5.545s] copying ct_package/path_planner.py -> /home/pi/workspace/ControlTower/build/ct_package/build/lib/ct_package
+[5.549s] copying ct_package/__init__.py -> /home/pi/workspace/ControlTower/build/ct_package/build/lib/ct_package
+[5.550s] copying ct_package/camera_calibration.py -> /home/pi/workspace/ControlTower/build/ct_package/build/lib/ct_package
+[5.550s] copying ct_package/mqtt_communication.py -> /home/pi/workspace/ControlTower/build/ct_package/build/lib/ct_package
+[5.552s] running install
+[5.554s] running install_lib
+[5.557s] creating /home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages/ct_package
+[5.558s] copying /home/pi/workspace/ControlTower/build/ct_package/build/lib/ct_package/trash_detector.py -> /home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages/ct_package
+[5.560s] copying /home/pi/workspace/ControlTower/build/ct_package/build/lib/ct_package/camera_subscriber.py -> /home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages/ct_package
+[5.561s] copying /home/pi/workspace/ControlTower/build/ct_package/build/lib/ct_package/robot_coord_transform.py -> /home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages/ct_package
+[5.566s] copying /home/pi/workspace/ControlTower/build/ct_package/build/lib/ct_package/cam_coord_transform.py -> /home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages/ct_package
+[5.567s] copying /home/pi/workspace/ControlTower/build/ct_package/build/lib/ct_package/arm_planner.py -> /home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages/ct_package
+[5.568s] copying /home/pi/workspace/ControlTower/build/ct_package/build/lib/ct_package/data_publisher.py -> /home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages/ct_package
+[5.569s] copying /home/pi/workspace/ControlTower/build/ct_package/build/lib/ct_package/path_planner.py -> /home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages/ct_package
+[5.570s] copying /home/pi/workspace/ControlTower/build/ct_package/build/lib/ct_package/__init__.py -> /home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages/ct_package
+[5.571s] copying /home/pi/workspace/ControlTower/build/ct_package/build/lib/ct_package/camera_calibration.py -> /home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages/ct_package
+[5.572s] copying /home/pi/workspace/ControlTower/build/ct_package/build/lib/ct_package/mqtt_communication.py -> /home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages/ct_package
+[5.576s] byte-compiling /home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages/ct_package/trash_detector.py to trash_detector.cpython-310.pyc
+[5.584s] byte-compiling /home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages/ct_package/camera_subscriber.py to camera_subscriber.cpython-310.pyc
+[5.587s] byte-compiling /home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages/ct_package/robot_coord_transform.py to robot_coord_transform.cpython-310.pyc
+[5.592s] byte-compiling /home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages/ct_package/cam_coord_transform.py to cam_coord_transform.cpython-310.pyc
+[5.596s] byte-compiling /home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages/ct_package/arm_planner.py to arm_planner.cpython-310.pyc
+[5.605s] byte-compiling /home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages/ct_package/data_publisher.py to data_publisher.cpython-310.pyc
+[5.606s] byte-compiling /home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages/ct_package/path_planner.py to path_planner.cpython-310.pyc
+[5.608s] byte-compiling /home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages/ct_package/__init__.py to __init__.cpython-310.pyc
+[5.611s] byte-compiling /home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages/ct_package/camera_calibration.py to camera_calibration.cpython-310.pyc
+[5.616s] byte-compiling /home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages/ct_package/mqtt_communication.py to mqtt_communication.cpython-310.pyc
+[5.618s] running install_data
+[5.620s] creating /home/pi/workspace/ControlTower/install/ct_package/share/ament_index
+[5.620s] creating /home/pi/workspace/ControlTower/install/ct_package/share/ament_index/resource_index
+[5.621s] creating /home/pi/workspace/ControlTower/install/ct_package/share/ament_index/resource_index/packages
+[5.622s] copying resource/ct_package -> /home/pi/workspace/ControlTower/install/ct_package/share/ament_index/resource_index/packages
+[5.622s] copying package.xml -> /home/pi/workspace/ControlTower/install/ct_package/share/ct_package
+[5.623s] creating /home/pi/workspace/ControlTower/install/ct_package/share/ct_package/launch
+[5.624s] copying launch/map_server.launch.py -> /home/pi/workspace/ControlTower/install/ct_package/share/ct_package/launch
+[5.625s] copying launch/robot_arm.launch.py -> /home/pi/workspace/ControlTower/install/ct_package/share/ct_package/launch
+[5.626s] creating /home/pi/workspace/ControlTower/install/ct_package/share/ct_package/params
+[5.628s] running install_egg_info
+[5.636s] Copying ../../build/ct_package/ct_package.egg-info to /home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages/ct_package-0.0.0-py3.10.egg-info
+[5.648s] running install_scripts
+[5.778s] Installing arm_planner script to /home/pi/workspace/ControlTower/install/ct_package/lib/ct_package
+[5.779s] Installing cam_coord_transform script to /home/pi/workspace/ControlTower/install/ct_package/lib/ct_package
+[5.781s] Installing camera_calibration script to /home/pi/workspace/ControlTower/install/ct_package/lib/ct_package
+[5.782s] Installing camera_subscriber script to /home/pi/workspace/ControlTower/install/ct_package/lib/ct_package
+[5.785s] Installing data_publisher script to /home/pi/workspace/ControlTower/install/ct_package/lib/ct_package
+[5.786s] Installing mqtt_communication script to /home/pi/workspace/ControlTower/install/ct_package/lib/ct_package
+[5.787s] Installing trash_detector script to /home/pi/workspace/ControlTower/install/ct_package/lib/ct_package
+[5.789s] writing list of installed files to '/home/pi/workspace/ControlTower/build/ct_package/install.log'
+[5.972s] Invoked command in '/home/pi/workspace/ControlTower/src/ct_package' returned '0': PYTHONPATH=/home/pi/workspace/ControlTower/build/ct_package/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/workspace/ControlTower/install/ct_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/ct_package build --build-base /home/pi/workspace/ControlTower/build/ct_package/build install --record /home/pi/workspace/ControlTower/build/ct_package/install.log --single-version-externally-managed install_data
