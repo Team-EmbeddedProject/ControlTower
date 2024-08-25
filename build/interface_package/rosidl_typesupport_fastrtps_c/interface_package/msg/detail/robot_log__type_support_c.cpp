@@ -85,11 +85,14 @@ static bool _RobotLog__cdr_serialize(
     cdr << ros_message->robot_id;
   }
 
-  // Field name: robot_location
+  // Field name: latitude
   {
-    size_t size = 3;
-    auto array_ptr = ros_message->robot_location;
-    cdr.serializeArray(array_ptr, size);
+    cdr << ros_message->latitude;
+  }
+
+  // Field name: longitude
+  {
+    cdr << ros_message->longitude;
   }
 
   // Field name: status
@@ -137,11 +140,14 @@ static bool _RobotLog__cdr_deserialize(
     cdr >> ros_message->robot_id;
   }
 
-  // Field name: robot_location
+  // Field name: latitude
   {
-    size_t size = 3;
-    auto array_ptr = ros_message->robot_location;
-    cdr.deserializeArray(array_ptr, size);
+    cdr >> ros_message->latitude;
+  }
+
+  // Field name: longitude
+  {
+    cdr >> ros_message->longitude;
   }
 
   // Field name: status
@@ -187,13 +193,16 @@ size_t get_serialized_size_interface_package__msg__RobotLog(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // field.name robot_location
+  // field.name latitude
   {
-    size_t array_size = 3;
-    auto array_ptr = ros_message->robot_location;
-    (void)array_ptr;
-    size_t item_size = sizeof(array_ptr[0]);
-    current_alignment += array_size * item_size +
+    size_t item_size = sizeof(ros_message->latitude);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name longitude
+  {
+    size_t item_size = sizeof(ros_message->longitude);
+    current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
   // field.name status
@@ -256,9 +265,17 @@ size_t max_serialized_size_interface_package__msg__RobotLog(
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
-  // member: robot_location
+  // member: latitude
   {
-    size_t array_size = 3;
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: longitude
+  {
+    size_t array_size = 1;
 
     last_member_size = array_size * sizeof(uint32_t);
     current_alignment += array_size * sizeof(uint32_t) +

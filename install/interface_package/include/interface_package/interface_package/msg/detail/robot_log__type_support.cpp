@@ -37,45 +37,7 @@ void RobotLog_fini_function(void * message_memory)
   typed_message->~RobotLog();
 }
 
-size_t size_function__RobotLog__robot_location(const void * untyped_member)
-{
-  (void)untyped_member;
-  return 3;
-}
-
-const void * get_const_function__RobotLog__robot_location(const void * untyped_member, size_t index)
-{
-  const auto & member =
-    *reinterpret_cast<const std::array<float, 3> *>(untyped_member);
-  return &member[index];
-}
-
-void * get_function__RobotLog__robot_location(void * untyped_member, size_t index)
-{
-  auto & member =
-    *reinterpret_cast<std::array<float, 3> *>(untyped_member);
-  return &member[index];
-}
-
-void fetch_function__RobotLog__robot_location(
-  const void * untyped_member, size_t index, void * untyped_value)
-{
-  const auto & item = *reinterpret_cast<const float *>(
-    get_const_function__RobotLog__robot_location(untyped_member, index));
-  auto & value = *reinterpret_cast<float *>(untyped_value);
-  value = item;
-}
-
-void assign_function__RobotLog__robot_location(
-  void * untyped_member, size_t index, const void * untyped_value)
-{
-  auto & item = *reinterpret_cast<float *>(
-    get_function__RobotLog__robot_location(untyped_member, index));
-  const auto & value = *reinterpret_cast<const float *>(untyped_value);
-  item = value;
-}
-
-static const ::rosidl_typesupport_introspection_cpp::MessageMember RobotLog_message_member_array[4] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember RobotLog_message_member_array[5] = {
   {
     "timestamp",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
@@ -111,20 +73,37 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember RobotLog_mess
     nullptr  // resize(index) function pointer
   },
   {
-    "robot_location",  // name
+    "latitude",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
-    true,  // is array
-    3,  // array size
+    false,  // is array
+    0,  // array size
     false,  // is upper bound
-    offsetof(interface_package::msg::RobotLog, robot_location),  // bytes offset in struct
+    offsetof(interface_package::msg::RobotLog, latitude),  // bytes offset in struct
     nullptr,  // default value
-    size_function__RobotLog__robot_location,  // size() function pointer
-    get_const_function__RobotLog__robot_location,  // get_const(index) function pointer
-    get_function__RobotLog__robot_location,  // get(index) function pointer
-    fetch_function__RobotLog__robot_location,  // fetch(index, &value) function pointer
-    assign_function__RobotLog__robot_location,  // assign(index, value) function pointer
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "longitude",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(interface_package::msg::RobotLog, longitude),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   },
   {
@@ -149,7 +128,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember RobotLog_mess
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers RobotLog_message_members = {
   "interface_package::msg",  // message namespace
   "RobotLog",  // message name
-  4,  // number of fields
+  5,  // number of fields
   sizeof(interface_package::msg::RobotLog),
   RobotLog_message_member_array,  // message members
   RobotLog_init_function,  // function to initialize message memory (memory has to be allocated)

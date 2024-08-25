@@ -39,52 +39,7 @@ void interface_package__msg__RobotLog__rosidl_typesupport_introspection_c__Robot
   interface_package__msg__RobotLog__fini(message_memory);
 }
 
-size_t interface_package__msg__RobotLog__rosidl_typesupport_introspection_c__size_function__RobotLog__robot_location(
-  const void * untyped_member)
-{
-  (void)untyped_member;
-  return 3;
-}
-
-const void * interface_package__msg__RobotLog__rosidl_typesupport_introspection_c__get_const_function__RobotLog__robot_location(
-  const void * untyped_member, size_t index)
-{
-  const float * member =
-    (const float *)(untyped_member);
-  return &member[index];
-}
-
-void * interface_package__msg__RobotLog__rosidl_typesupport_introspection_c__get_function__RobotLog__robot_location(
-  void * untyped_member, size_t index)
-{
-  float * member =
-    (float *)(untyped_member);
-  return &member[index];
-}
-
-void interface_package__msg__RobotLog__rosidl_typesupport_introspection_c__fetch_function__RobotLog__robot_location(
-  const void * untyped_member, size_t index, void * untyped_value)
-{
-  const float * item =
-    ((const float *)
-    interface_package__msg__RobotLog__rosidl_typesupport_introspection_c__get_const_function__RobotLog__robot_location(untyped_member, index));
-  float * value =
-    (float *)(untyped_value);
-  *value = *item;
-}
-
-void interface_package__msg__RobotLog__rosidl_typesupport_introspection_c__assign_function__RobotLog__robot_location(
-  void * untyped_member, size_t index, const void * untyped_value)
-{
-  float * item =
-    ((float *)
-    interface_package__msg__RobotLog__rosidl_typesupport_introspection_c__get_function__RobotLog__robot_location(untyped_member, index));
-  const float * value =
-    (const float *)(untyped_value);
-  *item = *value;
-}
-
-static rosidl_typesupport_introspection_c__MessageMember interface_package__msg__RobotLog__rosidl_typesupport_introspection_c__RobotLog_message_member_array[4] = {
+static rosidl_typesupport_introspection_c__MessageMember interface_package__msg__RobotLog__rosidl_typesupport_introspection_c__RobotLog_message_member_array[5] = {
   {
     "timestamp",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
@@ -120,20 +75,37 @@ static rosidl_typesupport_introspection_c__MessageMember interface_package__msg_
     NULL  // resize(index) function pointer
   },
   {
-    "robot_location",  // name
+    "latitude",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
-    true,  // is array
-    3,  // array size
+    false,  // is array
+    0,  // array size
     false,  // is upper bound
-    offsetof(interface_package__msg__RobotLog, robot_location),  // bytes offset in struct
+    offsetof(interface_package__msg__RobotLog, latitude),  // bytes offset in struct
     NULL,  // default value
-    interface_package__msg__RobotLog__rosidl_typesupport_introspection_c__size_function__RobotLog__robot_location,  // size() function pointer
-    interface_package__msg__RobotLog__rosidl_typesupport_introspection_c__get_const_function__RobotLog__robot_location,  // get_const(index) function pointer
-    interface_package__msg__RobotLog__rosidl_typesupport_introspection_c__get_function__RobotLog__robot_location,  // get(index) function pointer
-    interface_package__msg__RobotLog__rosidl_typesupport_introspection_c__fetch_function__RobotLog__robot_location,  // fetch(index, &value) function pointer
-    interface_package__msg__RobotLog__rosidl_typesupport_introspection_c__assign_function__RobotLog__robot_location,  // assign(index, value) function pointer
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "longitude",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(interface_package__msg__RobotLog, longitude),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -158,7 +130,7 @@ static rosidl_typesupport_introspection_c__MessageMember interface_package__msg_
 static const rosidl_typesupport_introspection_c__MessageMembers interface_package__msg__RobotLog__rosidl_typesupport_introspection_c__RobotLog_message_members = {
   "interface_package__msg",  // message namespace
   "RobotLog",  // message name
-  4,  // number of fields
+  5,  // number of fields
   sizeof(interface_package__msg__RobotLog),
   interface_package__msg__RobotLog__rosidl_typesupport_introspection_c__RobotLog_message_member_array,  // message members
   interface_package__msg__RobotLog__rosidl_typesupport_introspection_c__RobotLog_init_function,  // function to initialize message memory (memory has to be allocated)

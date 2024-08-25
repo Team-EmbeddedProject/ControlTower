@@ -6,13 +6,14 @@
 
 module interface_package {
   module msg {
-    typedef float float__3[3];
     struct RobotLog {
       builtin_interfaces::msg::Time timestamp;
 
       int32 robot_id;
 
-      float__3 robot_location;
+      float latitude;
+
+      float longitude;
 
       string status;
     };

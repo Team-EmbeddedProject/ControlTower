@@ -37,16 +37,32 @@ private:
   ::interface_package::msg::RobotLog msg_;
 };
 
-class Init_RobotLog_robot_location
+class Init_RobotLog_longitude
 {
 public:
-  explicit Init_RobotLog_robot_location(::interface_package::msg::RobotLog & msg)
+  explicit Init_RobotLog_longitude(::interface_package::msg::RobotLog & msg)
   : msg_(msg)
   {}
-  Init_RobotLog_status robot_location(::interface_package::msg::RobotLog::_robot_location_type arg)
+  Init_RobotLog_status longitude(::interface_package::msg::RobotLog::_longitude_type arg)
   {
-    msg_.robot_location = std::move(arg);
+    msg_.longitude = std::move(arg);
     return Init_RobotLog_status(msg_);
+  }
+
+private:
+  ::interface_package::msg::RobotLog msg_;
+};
+
+class Init_RobotLog_latitude
+{
+public:
+  explicit Init_RobotLog_latitude(::interface_package::msg::RobotLog & msg)
+  : msg_(msg)
+  {}
+  Init_RobotLog_longitude latitude(::interface_package::msg::RobotLog::_latitude_type arg)
+  {
+    msg_.latitude = std::move(arg);
+    return Init_RobotLog_longitude(msg_);
   }
 
 private:
@@ -59,10 +75,10 @@ public:
   explicit Init_RobotLog_robot_id(::interface_package::msg::RobotLog & msg)
   : msg_(msg)
   {}
-  Init_RobotLog_robot_location robot_id(::interface_package::msg::RobotLog::_robot_id_type arg)
+  Init_RobotLog_latitude robot_id(::interface_package::msg::RobotLog::_robot_id_type arg)
   {
     msg_.robot_id = std::move(arg);
-    return Init_RobotLog_robot_location(msg_);
+    return Init_RobotLog_latitude(msg_);
   }
 
 private:

@@ -29,7 +29,8 @@ interface_package__msg__RobotLog__init(interface_package__msg__RobotLog * msg)
     return false;
   }
   // robot_id
-  // robot_location
+  // latitude
+  // longitude
   // status
   if (!rosidl_runtime_c__String__init(&msg->status)) {
     interface_package__msg__RobotLog__fini(msg);
@@ -47,7 +48,8 @@ interface_package__msg__RobotLog__fini(interface_package__msg__RobotLog * msg)
   // timestamp
   builtin_interfaces__msg__Time__fini(&msg->timestamp);
   // robot_id
-  // robot_location
+  // latitude
+  // longitude
   // status
   rosidl_runtime_c__String__fini(&msg->status);
 }
@@ -68,11 +70,13 @@ interface_package__msg__RobotLog__are_equal(const interface_package__msg__RobotL
   if (lhs->robot_id != rhs->robot_id) {
     return false;
   }
-  // robot_location
-  for (size_t i = 0; i < 3; ++i) {
-    if (lhs->robot_location[i] != rhs->robot_location[i]) {
-      return false;
-    }
+  // latitude
+  if (lhs->latitude != rhs->latitude) {
+    return false;
+  }
+  // longitude
+  if (lhs->longitude != rhs->longitude) {
+    return false;
   }
   // status
   if (!rosidl_runtime_c__String__are_equal(
@@ -99,10 +103,10 @@ interface_package__msg__RobotLog__copy(
   }
   // robot_id
   output->robot_id = input->robot_id;
-  // robot_location
-  for (size_t i = 0; i < 3; ++i) {
-    output->robot_location[i] = input->robot_location[i];
-  }
+  // latitude
+  output->latitude = input->latitude;
+  // longitude
+  output->longitude = input->longitude;
   // status
   if (!rosidl_runtime_c__String__copy(
       &(input->status), &(output->status)))

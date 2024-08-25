@@ -28,7 +28,8 @@ typedef struct interface_package__msg__RobotLog
 {
   builtin_interfaces__msg__Time timestamp;
   int32_t robot_id;
-  float robot_location[3];
+  float latitude;
+  float longitude;
   rosidl_runtime_c__String status;
 } interface_package__msg__RobotLog;
 

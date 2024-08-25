@@ -3,6 +3,8 @@ from awscrt import mqtt5, http
 import threading
 from concurrent.futures import Future
 import time
+from datetime import datetime
+from zoneinfo import ZoneInfo
 import json
 import rclpy
 from rclpy.node import Node
@@ -117,15 +119,21 @@ class MqttCommunication(Node):
 
     def on_lifecycle_connection_success(self, lifecycle_connect_success_data: mqtt5.LifecycleConnectSuccessData):
         self.get_logger().info("Lifecycle Connection Success")
-        self.future_connection_success.set_result(lifecycle_connect_success_data)
+        if not self.future_connection_success.done():
+            self.future_connection_success.set_result(lifecycle_connect_success_data)
 
     def on_lifecycle_connection_failure(self, lifecycle_connection_failure: mqtt5.LifecycleConnectFailureData):
         self.get_logger().info(f"Lifecycle Connection Failure: {lifecycle_connection_failure.exception}")
 
     def trash_detection_callback(self, request, response):
         # Publish Trash Info to AWS IoT Core
+        mysql_timestamp = datetime.fromtimestamp(
+            request.timestamp.sec + request.timestamp.nanosec * 1e-9,
+            tz=ZoneInfo("Asia/Seoul")
+            ).strftime('%Y-%m-%d %H:%M:%S')
+        
         message = {
-            "timestamp": str(request.timestamp),
+            "timestamp": mysql_timestamp,
             "robot_id": request.robot_id,
             "trash_type": request.trash_type,
             "latitude": float(request.latitude),
@@ -138,10 +146,16 @@ class MqttCommunication(Node):
 
     def robot_log_callback(self, msg):
         # Publish Robot Log to AWS IoT Core
+        mysql_timestamp = datetime.fromtimestamp(
+            msg.timestamp.sec + msg.timestamp.nanosec * 1e-9,
+            tz=ZoneInfo("Asia/Seoul")
+            ).strftime('%Y-%m-%d %H:%M:%S')
+
         message = {
-            "timestamp": str(msg.timestamp),
+            "timestamp": mysql_timestamp,
             "robot_id": msg.robot_id,
-            "robot_location": msg.robot_location,
+            "latitude": float(msg.latitude),
+            "longitude": float(msg.longitude),
             "status": msg.status
         }
         self.publish_to_mqtt(json.dumps(message), self.cmdData.robot_log_topic)

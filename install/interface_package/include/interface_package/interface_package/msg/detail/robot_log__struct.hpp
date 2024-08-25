@@ -44,21 +44,22 @@ struct RobotLog_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->robot_id = 0l;
-      std::fill<typename std::array<float, 3>::iterator, float>(this->robot_location.begin(), this->robot_location.end(), 0.0f);
+      this->latitude = 0.0f;
+      this->longitude = 0.0f;
       this->status = "";
     }
   }
 
   explicit RobotLog_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   : timestamp(_alloc, _init),
-    robot_location(_alloc),
     status(_alloc)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->robot_id = 0l;
-      std::fill<typename std::array<float, 3>::iterator, float>(this->robot_location.begin(), this->robot_location.end(), 0.0f);
+      this->latitude = 0.0f;
+      this->longitude = 0.0f;
       this->status = "";
     }
   }
@@ -70,9 +71,12 @@ struct RobotLog_
   using _robot_id_type =
     int32_t;
   _robot_id_type robot_id;
-  using _robot_location_type =
-    std::array<float, 3>;
-  _robot_location_type robot_location;
+  using _latitude_type =
+    float;
+  _latitude_type latitude;
+  using _longitude_type =
+    float;
+  _longitude_type longitude;
   using _status_type =
     std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
   _status_type status;
@@ -90,10 +94,16 @@ struct RobotLog_
     this->robot_id = _arg;
     return *this;
   }
-  Type & set__robot_location(
-    const std::array<float, 3> & _arg)
+  Type & set__latitude(
+    const float & _arg)
   {
-    this->robot_location = _arg;
+    this->latitude = _arg;
+    return *this;
+  }
+  Type & set__longitude(
+    const float & _arg)
+  {
+    this->longitude = _arg;
     return *this;
   }
   Type & set__status(
@@ -151,7 +161,10 @@ struct RobotLog_
     if (this->robot_id != other.robot_id) {
       return false;
     }
-    if (this->robot_location != other.robot_location) {
+    if (this->latitude != other.latitude) {
+      return false;
+    }
+    if (this->longitude != other.longitude) {
       return false;
     }
     if (this->status != other.status) {

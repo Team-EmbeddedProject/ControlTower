@@ -13,7 +13,6 @@ ct_package/arm_planner.py
 ct_package/cam_coord_transform.py
 ct_package/camera_calibration.py
 ct_package/camera_subscriber.py
-ct_package/command_line_utils.py
 ct_package/data_publisher.py
 ct_package/mqtt_communication.py
 ct_package/path_planner.py

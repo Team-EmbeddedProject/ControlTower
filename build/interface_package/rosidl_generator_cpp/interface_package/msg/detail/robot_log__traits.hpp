@@ -43,21 +43,17 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
-  // member: robot_location
+  // member: latitude
   {
-    if (msg.robot_location.size() == 0) {
-      out << "robot_location: []";
-    } else {
-      out << "robot_location: [";
-      size_t pending_items = msg.robot_location.size();
-      for (auto item : msg.robot_location) {
-        rosidl_generator_traits::value_to_yaml(item, out);
-        if (--pending_items > 0) {
-          out << ", ";
-        }
-      }
-      out << "]";
-    }
+    out << "latitude: ";
+    rosidl_generator_traits::value_to_yaml(msg.latitude, out);
+    out << ", ";
+  }
+
+  // member: longitude
+  {
+    out << "longitude: ";
+    rosidl_generator_traits::value_to_yaml(msg.longitude, out);
     out << ", ";
   }
 
@@ -92,24 +88,24 @@ inline void to_block_style_yaml(
     out << "\n";
   }
 
-  // member: robot_location
+  // member: latitude
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    if (msg.robot_location.size() == 0) {
-      out << "robot_location: []\n";
-    } else {
-      out << "robot_location:\n";
-      for (auto item : msg.robot_location) {
-        if (indentation > 0) {
-          out << std::string(indentation, ' ');
-        }
-        out << "- ";
-        rosidl_generator_traits::value_to_yaml(item, out);
-        out << "\n";
-      }
+    out << "latitude: ";
+    rosidl_generator_traits::value_to_yaml(msg.latitude, out);
+    out << "\n";
+  }
+
+  // member: longitude
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
     }
+    out << "longitude: ";
+    rosidl_generator_traits::value_to_yaml(msg.longitude, out);
+    out << "\n";
   }
 
   // member: status

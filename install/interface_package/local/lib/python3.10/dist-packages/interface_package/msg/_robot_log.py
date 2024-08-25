@@ -9,9 +9,6 @@ import builtins  # noqa: E402, I100
 
 import math  # noqa: E402, I100
 
-# Member 'robot_location'
-import numpy  # noqa: E402, I100
-
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -66,21 +63,24 @@ class RobotLog(metaclass=Metaclass_RobotLog):
     __slots__ = [
         '_timestamp',
         '_robot_id',
-        '_robot_location',
+        '_latitude',
+        '_longitude',
         '_status',
     ]
 
     _fields_and_field_types = {
         'timestamp': 'builtin_interfaces/Time',
         'robot_id': 'int32',
-        'robot_location': 'float[3]',
+        'latitude': 'float',
+        'longitude': 'float',
         'status': 'string',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.NamespacedType(['builtin_interfaces', 'msg'], 'Time'),  # noqa: E501
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
-        rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('float'), 3),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
     )
 
@@ -91,11 +91,8 @@ class RobotLog(metaclass=Metaclass_RobotLog):
         from builtin_interfaces.msg import Time
         self.timestamp = kwargs.get('timestamp', Time())
         self.robot_id = kwargs.get('robot_id', int())
-        if 'robot_location' not in kwargs:
-            self.robot_location = numpy.zeros(3, dtype=numpy.float32)
-        else:
-            self.robot_location = numpy.array(kwargs.get('robot_location'), dtype=numpy.float32)
-            assert self.robot_location.shape == (3, )
+        self.latitude = kwargs.get('latitude', float())
+        self.longitude = kwargs.get('longitude', float())
         self.status = kwargs.get('status', str())
 
     def __repr__(self):
@@ -131,7 +128,9 @@ class RobotLog(metaclass=Metaclass_RobotLog):
             return False
         if self.robot_id != other.robot_id:
             return False
-        if all(self.robot_location != other.robot_location):
+        if self.latitude != other.latitude:
+            return False
+        if self.longitude != other.longitude:
             return False
         if self.status != other.status:
             return False
@@ -172,35 +171,34 @@ class RobotLog(metaclass=Metaclass_RobotLog):
         self._robot_id = value
 
     @builtins.property
-    def robot_location(self):
-        """Message field 'robot_location'."""
-        return self._robot_location
+    def latitude(self):
+        """Message field 'latitude'."""
+        return self._latitude
 
-    @robot_location.setter
-    def robot_location(self, value):
-        if isinstance(value, numpy.ndarray):
-            assert value.dtype == numpy.float32, \
-                "The 'robot_location' numpy.ndarray() must have the dtype of 'numpy.float32'"
-            assert value.size == 3, \
-                "The 'robot_location' numpy.ndarray() must have a size of 3"
-            self._robot_location = value
-            return
+    @latitude.setter
+    def latitude(self, value):
         if __debug__:
-            from collections.abc import Sequence
-            from collections.abc import Set
-            from collections import UserList
-            from collections import UserString
             assert \
-                ((isinstance(value, Sequence) or
-                  isinstance(value, Set) or
-                  isinstance(value, UserList)) and
-                 not isinstance(value, str) and
-                 not isinstance(value, UserString) and
-                 len(value) == 3 and
-                 all(isinstance(v, float) for v in value) and
-                 all(not (val < -3.402823466e+38 or val > 3.402823466e+38) or math.isinf(val) for val in value)), \
-                "The 'robot_location' field must be a set or sequence with length 3 and each value of type 'float' and each float in [-340282346600000016151267322115014000640.000000, 340282346600000016151267322115014000640.000000]"
-        self._robot_location = numpy.array(value, dtype=numpy.float32)
+                isinstance(value, float), \
+                "The 'latitude' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'latitude' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._latitude = value
+
+    @builtins.property
+    def longitude(self):
+        """Message field 'longitude'."""
+        return self._longitude
+
+    @longitude.setter
+    def longitude(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'longitude' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'longitude' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._longitude = value
 
     @builtins.property
     def status(self):

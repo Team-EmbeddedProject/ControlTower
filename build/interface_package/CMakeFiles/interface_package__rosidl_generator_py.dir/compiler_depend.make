@@ -253,7 +253,6 @@ CMakeFiles/interface_package__rosidl_generator_py.dir/rosidl_generator_py/interf
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
   rosidl_generator_c/interface_package/msg/detail/robot_log__functions.h \
   rosidl_generator_c/interface_package/msg/rosidl_generator_c__visibility_control.h \
-  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence_functions.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h
 
 CMakeFiles/interface_package__rosidl_generator_py.dir/rosidl_generator_py/interface_package/srv/_node_num_s.c.o: rosidl_generator_py/interface_package/srv/_node_num_s.c \
@@ -758,13 +757,10 @@ CMakeFiles/interface_package__rosidl_generator_py.dir/rosidl_generator_py/interf
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
   rosidl_generator_c/interface_package/srv/detail/trash_info__functions.h \
   rosidl_generator_c/interface_package/msg/rosidl_generator_c__visibility_control.h \
-  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h \
-  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence_functions.h
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h
 
 
 rosidl_generator_c/interface_package/srv/detail/trash_info__functions.h:
-
-rosidl_generator_py/interface_package/srv/_trash_info_s.c:
 
 /usr/include/asm-generic/posix_types.h:
 
@@ -1272,8 +1268,6 @@ rosidl_generator_c/interface_package/msg/detail/robot_log__struct.h:
 
 rosidl_generator_c/interface_package/msg/rosidl_generator_c__visibility_control.h:
 
-/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence_functions.h:
-
 rosidl_generator_c/interface_package/srv/detail/node_num__struct.h:
 
 /usr/include/python3.10/typeslots.h:
@@ -1281,3 +1275,5 @@ rosidl_generator_c/interface_package/srv/detail/node_num__struct.h:
 /usr/include/python3.10/cpython/abstract.h:
 
 rosidl_generator_c/interface_package/srv/detail/node_num__functions.h:
+
+rosidl_generator_py/interface_package/srv/_trash_info_s.c:

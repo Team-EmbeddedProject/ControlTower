@@ -62,10 +62,10 @@ cdr_serialize(
     cdr);
   // Member: robot_id
   cdr << ros_message.robot_id;
-  // Member: robot_location
-  {
-    cdr << ros_message.robot_location;
-  }
+  // Member: latitude
+  cdr << ros_message.latitude;
+  // Member: longitude
+  cdr << ros_message.longitude;
   // Member: status
   cdr << ros_message.status;
   return true;
@@ -84,10 +84,11 @@ cdr_deserialize(
   // Member: robot_id
   cdr >> ros_message.robot_id;
 
-  // Member: robot_location
-  {
-    cdr >> ros_message.robot_location;
-  }
+  // Member: latitude
+  cdr >> ros_message.latitude;
+
+  // Member: longitude
+  cdr >> ros_message.longitude;
 
   // Member: status
   cdr >> ros_message.status;
@@ -119,11 +120,16 @@ get_serialized_size(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // Member: robot_location
+  // Member: latitude
   {
-    size_t array_size = 3;
-    size_t item_size = sizeof(ros_message.robot_location[0]);
-    current_alignment += array_size * item_size +
+    size_t item_size = sizeof(ros_message.latitude);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: longitude
+  {
+    size_t item_size = sizeof(ros_message.longitude);
+    current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
   // Member: status
@@ -182,9 +188,18 @@ max_serialized_size_RobotLog(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
-  // Member: robot_location
+  // Member: latitude
   {
-    size_t array_size = 3;
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Member: longitude
+  {
+    size_t array_size = 1;
 
     last_member_size = array_size * sizeof(uint32_t);
     current_alignment += array_size * sizeof(uint32_t) +
