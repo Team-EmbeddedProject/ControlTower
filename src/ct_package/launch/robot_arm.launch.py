@@ -7,12 +7,19 @@ from launch.actions import DeclareLaunchArgument, ExecuteProcess
 from launch.substitutions import LaunchConfiguration, Command
 
 def generate_launch_description():
+    param_file_dir = os.path.join(
+        get_package_share_directory('ct_package'),
+        'params',
+        'mqtt_param.yaml'
+    )
+
     return LaunchDescription([
         Node(
             package='ct_package',
             executable='mqtt_communication',
             name='mqtt_communication',
-            output='screen'
+            output='screen',
+            parameters=[param_file_dir]
         ),
 
         Node(

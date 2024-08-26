@@ -14,7 +14,7 @@ from sensor_msgs.msg import Image
 from geometry_msgs.msg import Point
 from interface_package.srv import TrashInfo
 
-HOME_DIR = '/home/pi/ControlTower/src/ct_package'
+HOME_DIR = '/home/pi/workspace/ControlTower/src/ct_package'
 MODEL_PATH = HOME_DIR + '/resource/best.pt'
 SAVE_PATH = HOME_DIR + '/resource/stream_image.jpg'
 STREAM_URL = 'http://127.0.0.1:8080/?action=stream'
@@ -132,7 +132,8 @@ class TrashDetector(Node):
             request.robot_id = 1  # or other robot id
             request.timestamp = self.get_clock().now().to_msg()
             request.trash_type = label
-            request.trash_location = [0.0, 0.0, 0.0]  # 적절한 위치로 수정 필요
+            request.latitude = 128.613  # 적절한 위치로 수정 필요
+            request.longitude = 35.8875
 
             self.future = self.trash_info_client.call_async(request)
             self.future.add_done_callback(self.service_response_callback)

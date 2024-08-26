@@ -1,8 +1,0 @@
-{
-  "package_name": "interface_package",
-  "non_idl_tuples": [
-    "/home/pi/workspace/ControlTower/src/interface_package:msg/RobotLog.msg",
-    "/home/pi/workspace/ControlTower/src/interface_package:srv/NodeNum.srv",
-    "/home/pi/workspace/ControlTower/src/interface_package:srv/TrashInfo.srv"
-  ]
-}

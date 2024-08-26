@@ -43,9 +43,9 @@ class ArmPlanner(Node):
             world_coord = self.cam_cood_transfomer.pixel_to_world_coord(pixel_coord, target_z)
 
             robot_coord = Point()
-            robot_coord.x = world_coord.x
-            robot_coord.y = world_coord.y + (self.cam_cood_transfomer.cam_offset.y / 10)
-            robot_coord.z = world_coord.z
+            robot_coord.x = world_coord.x + (self.cam_cood_transfomer.cam_offset.y / 10)
+            robot_coord.y = world_coord.y + (self.cam_cood_transfomer.cam_offset.y / 10) + (self.cam_cood_transfomer.cam_offset.z / 10)
+            robot_coord.z = world_coord.z + 4
 
             self.robot_point_publisher.publish(robot_coord)
             self.get_logger().info(f"Published robot coordinates: {robot_coord}")

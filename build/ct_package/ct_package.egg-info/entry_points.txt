@@ -1,9 +1,0 @@
-[console_scripts]
-arm_planner = ct_package.arm_planner:main
-cam_coord_transform = ct_package.cam_coord_transform:main
-camera_calibration = ct_package.camera_calibration:main
-camera_subscriber = ct_package.camera_subscriber:main
-data_publisher = ct_package.data_publisher:main
-mqtt_communication = ct_package.mqtt_communication:main
-trash_detector = ct_package.trash_detector:main
-
