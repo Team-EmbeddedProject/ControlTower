@@ -23,19 +23,21 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'camera_subscriber = ct_package.camera_subscriber:main',
             'trash_detector = ct_package.trash_detector:main',
-            'data_publisher = ct_package.data_publisher:main',
             'mqtt_communication = ct_package.mqtt_communication:main',
-            'camera_calibration = ct_package.camera_calibration:main',
+            'camera_calibration = ct_package.camera_calibration:main', 
             'arm_planner = ct_package.arm_planner:main',
-            'cam_coord_transform = ct_package.cam_coord_transform:main'
+            'tcp_controller = ct_package.tcp_controller:main',
+            'path_planner = ct_package.path_planner:main',
+            'data_publisher = ct_package.data_publisher:main',
+            'cam_coord_transform = ct_package.cam_coord_transform:main',
+            'shape_detector = ct_package.shape_detector:main',
+            'mode_controller = ct_package.mode_controller:main'
         ],
     },
     package_data={
         package_name: [
-            'launch/*.launch.py',
-            'maps/*',
+            'launch/*.launch.py'
         ],
     },
     include_package_data=True,

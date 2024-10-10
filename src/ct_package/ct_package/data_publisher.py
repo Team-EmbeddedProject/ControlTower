@@ -1,3 +1,4 @@
+# ## trash_info
 import rclpy
 from rclpy.node import Node
 from rclpy.qos import QoSProfile
@@ -14,13 +15,11 @@ class DataPublisher(Node):
             self.get_logger().info('Service not available, waiting...')
 
         self.call_trash_service("PLA")
-        
-        # self.timer = self.create_timer(10.0, self.timer_callback)
-        
+ 
     def call_trash_service(self, label):
         request = TrashInfo.Request()
-        request.robot_id = 1  # or other robot id
         request.timestamp = self.get_clock().now().to_msg()
+        request.robot_id = 1  # or other robot id
         request.trash_type = label
         request.latitude = 0.0  # 적절한 위치로 수정 필요
         request.longitude = 0.0
@@ -51,3 +50,41 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
+
+## robot_log
+# import rclpy
+# from rclpy.node import Node
+# from interface_package.msg import RobotLog
+# from builtin_interfaces.msg import Time
+
+# class RobotLogPublisher(Node):
+#     def __init__(self):
+#         super().__init__('robot_log_publisher')
+#         self.publisher_ = self.create_publisher(RobotLog, 'robot_log', 10)
+#         # 0.5초마다 publish_log_message 함수를 호출하는 타이머
+#         self.timer = self.create_timer(0.5, self.publish_log_message)
+
+#     def publish_log_message(self):
+#         msg = RobotLog()
+#         msg.timestamp = self.get_clock().now().to_msg()
+#         msg.robot_id = 1
+#         msg.row_id = 1  # 테스트용 row ID
+#         msg.col_id = 1  # 테스트용 col ID
+
+#         self.publisher_.publish(msg)
+#         self.get_logger().info(f'Published RobotLog: robot_id={msg.robot_id}, row_id={msg.row_id}, col_id={msg.col_id}')
+
+# def main(args=None):
+#     rclpy.init(args=args)
+#     robot_log_publisher = RobotLogPublisher()
+
+#     try:
+#         rclpy.spin(robot_log_publisher)  # spin을 사용하여 타이머가 실행되도록 함
+#     except KeyboardInterrupt:
+#         pass
+#     finally:
+#         robot_log_publisher.destroy_node()
+#         rclpy.shutdown()
+
+# if __name__ == '__main__':
+#     main()

@@ -1,63 +1,64 @@
-import rclpy
+import rclpy 
 from rclpy.node import Node
 from rclpy.qos import QoSProfile
 from geometry_msgs.msg import Point
-import time
-import logging
-from ct_package.cam_coord_transform import CamCoordTransformer, CoordPixel, Coord3D
 
-# CRITICAL, ERROR, WARNING, INFO, DEBUG
-logging.basicConfig(level=logging.ERROR, format='%(asctime)s - %(levelname)s - %(message)s')
-logger = logging.getLogger(__name__)
-
-# 이미지 좌표계 변환하고 arm_coordinate_commands 토픽으로 퍼블리시 
 class ArmPlanner(Node):
+    """
+    ROS 2 노드: 실세계 3D 좌표를 로봇 팔의 목표 좌표로 변환하여 발행합니다.
+    """
+
     def __init__(self):
         super().__init__('arm_planner')
         qos_profile = QoSProfile(depth=10)
-        
-        # cam_offset, cam_angle, intrinsic_mat_file, pixel_width, pixel_height 설정
-        self.cam_cood_transfomer = CamCoordTransformer(cam_offset=Coord3D(0, 80, 100), cam_angle=141.0)
 
-        # 이미지 좌표
-        self.trash_point_subscriber = self.create_subscription(
+        # 카메라 오프셋 설정 (센티미터 단위)
+        self.cam_offset = Point(x=0.0, y= -8.0, z= -3.0)  # offset 계산하는법
+
+        # 실세계 좌표를 수신하기 위한 구독자 생성 (CoordTransformer 노드로부터)
+        self.world_coord_subscriber = self.create_subscription(
             Point, 
-            'trash_point', 
-            self.point_lisener_callback, 
+            'world_coordinates', 
+            self.world_coord_callback, 
             qos_profile
         )
+        self.get_logger().info("Subscribed to 'world_coordinates' topic.")
 
-        # 로봇 팔 좌표
+        # 로봇 팔 좌표를 발행하기 위한 퍼블리셔 생성
         self.robot_point_publisher = self.create_publisher(
             Point,
             'arm_coordinate_commands',
             qos_profile
         )
+        self.get_logger().info("Publishing to 'arm_coordinate_commands' topic.")
 
-    def point_lisener_callback(self, msg):
+    def world_coord_callback(self, msg):
         try:
-            u = int(msg.x)
-            v = int(msg.y)
-            pixel_coord = CoordPixel(u, v)
-            target_z = msg.z #  mm
-            world_coord = self.cam_cood_transfomer.pixel_to_world_coord(pixel_coord, target_z)
+            X = msg.x  # cm 단위
+            Y = msg.y  # cm 단위
+            Z = msg.z  # cm 단위
 
+            # 카메라 오프셋을 적용하고 mm 단위로 변환
             robot_coord = Point()
-            robot_coord.x = world_coord.x + (self.cam_cood_transfomer.cam_offset.y / 10)
-            robot_coord.y = world_coord.y + (self.cam_cood_transfomer.cam_offset.y / 10) + (self.cam_cood_transfomer.cam_offset.z / 10)
-            robot_coord.z = world_coord.z + 4
+            robot_coord.x = (X + self.cam_offset.x) * 10  # cm -> mm 변환
+            robot_coord.y = (Y + self.cam_offset.y) * 10
+            robot_coord.z = (Z + self.cam_offset.z) * 10
 
             self.robot_point_publisher.publish(robot_coord)
-            self.get_logger().info(f"Published robot coordinates: {robot_coord}")
+            self.get_logger().info(f"Published robot coordinates: X={robot_coord.x:.2f} mm, Y={robot_coord.y:.2f} mm, Z={robot_coord.z:.2f} mm")
         except Exception as e:
-            self.get_logger().error(f"Error in point_listener_callback: {e}")
+            self.get_logger().error(f"Error in world_coord_callback: {e}")
 
 def main(args=None):
     rclpy.init(args=args)
     arm_planner = ArmPlanner()
-    rclpy.spin(arm_planner)
-    arm_planner.destroy_node()
-    rclpy.shutdown()
+    try:
+        rclpy.spin(arm_planner)
+    except KeyboardInterrupt:
+        arm_planner.get_logger().info("Shutting down ArmPlanner node.")
+    finally:
+        arm_planner.destroy_node()
+        rclpy.shutdown()
 
 if __name__ == '__main__':
-    main()
+    main() 

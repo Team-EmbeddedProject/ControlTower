@@ -14,6 +14,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/RobotLog.msg"
   "srv/NodeNum.srv"
   "srv/TrashInfo.srv"
+  "srv/ModeNum.srv"
   DEPENDENCIES builtin_interfaces
 )
 
